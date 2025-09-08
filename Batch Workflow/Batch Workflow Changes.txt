@@ -1,0 +1,5 @@
+Matchcriteria mandatory
+
+BatchId and RiskID - check record before raising for approval
+ 
+Page numbers basis 20 records for each page
