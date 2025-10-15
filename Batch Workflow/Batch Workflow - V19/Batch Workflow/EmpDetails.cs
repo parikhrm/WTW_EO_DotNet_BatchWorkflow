@@ -35,7 +35,7 @@ namespace Batch_Workflow
                 conn.Open();
                 cmd.Parameters.Clear();
                 cmd.CommandType = CommandType.Text;
-                cmd.CommandText = "select * from dbo.tbl_emp_details with(nolock) where Process = 'Batch Checking' and IsDeleted = 0 union all select * from dbo.tbl_emp_details with(nolock) where empname = 'Gautami Kamath' and IsDeleted = 0 order by EmpName";
+                cmd.CommandText = "select * from dbo.tbl_emp_details with(nolock) where Process = 'Batch Checking' and IsDeleted = 0 union all select * from dbo.tbl_emp_details with(nolock) where empname in ('Gautami Kamath','Chaitali Dutta') and IsDeleted = 0 order by EmpName";
                 sda.SelectCommand = cmd;
                 dt = dta;
                 sda.Fill(dta);
