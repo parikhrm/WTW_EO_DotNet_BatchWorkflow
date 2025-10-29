@@ -2497,7 +2497,7 @@ namespace Batch_Workflow
                     uploadedby.Text = row.Cells["txtUploadedBy"].Value.ToString();
                 }
                 //checkBox2.Enabled = true;
-                if (update.Enabled == true && (inquirystatus_associatename.Text == "naika" || inquirystatus_associatename.Text == "kamathgg" || inquirystatus_associatename.Text == "BhosaleSh" || inquirystatus_associatename.Text == "parikhrm" || inquirystatus_associatename.Text == "ShethCh" || inquirystatus_associatename.Text == "BhallaMa" || inquirystatus_associatename.Text == "DsouzaDiX" || inquirystatus_associatename.Text == "SwamySh" || inquirystatus_associatename.Text == "RaoSR" || inquirystatus_associatename.Text == "BOMBLEHA" || inquirystatus_associatename.Text == "NairRaR"))
+                if (update.Enabled == true && (inquirystatus_associatename.Text == "naika" || inquirystatus_associatename.Text == "kamathgg" || inquirystatus_associatename.Text == "BhosaleSh" || inquirystatus_associatename.Text == "parikhrm" || inquirystatus_associatename.Text == "ShethCh" || inquirystatus_associatename.Text == "BhallaMa" || inquirystatus_associatename.Text == "DsouzaDiX" || inquirystatus_associatename.Text == "SwamySh" || inquirystatus_associatename.Text == "RaoSR" || inquirystatus_associatename.Text == "BOMBLEHA" || inquirystatus_associatename.Text == "NairRaR" || inquirystatus_associatename.Text == "LokwaniEs"))
                 {
                     checkBox2.Enabled = true;
                 }
