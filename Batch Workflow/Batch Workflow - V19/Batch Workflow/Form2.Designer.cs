@@ -119,6 +119,33 @@
             this.requestoremailaddress = new System.Windows.Forms.TextBox();
             this.label27 = new System.Windows.Forms.Label();
             this.batchworkflow_datagridview = new System.Windows.Forms.DataGridView();
+            this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.searchby_sourcebu_batchworkflow = new System.Windows.Forms.ComboBox();
+            this.label37 = new System.Windows.Forms.Label();
+            this.searchby_eventlist_batchworkflow = new System.Windows.Forms.TextBox();
+            this.label36 = new System.Windows.Forms.Label();
+            this.searchby_entityid_batchworkflow = new System.Windows.Forms.TextBox();
+            this.label34 = new System.Windows.Forms.Label();
+            this.searchby_associatename_batchworkflow = new System.Windows.Forms.ComboBox();
+            this.label33 = new System.Windows.Forms.Label();
+            this.label32 = new System.Windows.Forms.Label();
+            this.searchby_riskid_batchworkflow = new System.Windows.Forms.TextBox();
+            this.searchby_inquirystatus_batchworkflow = new System.Windows.Forms.ComboBox();
+            this.label26 = new System.Windows.Forms.Label();
+            this.searchby_pagenumber_batchworkflow = new System.Windows.Forms.NumericUpDown();
+            this.label24 = new System.Windows.Forms.Label();
+            this.searchby_partyname_batchworkflow = new System.Windows.Forms.TextBox();
+            this.searchby_trackingid_batchworkflow = new System.Windows.Forms.TextBox();
+            this.searchby_batchid_batchworkflow = new System.Windows.Forms.TextBox();
+            this.label31 = new System.Windows.Forms.Label();
+            this.label30 = new System.Windows.Forms.Label();
+            this.label29 = new System.Windows.Forms.Label();
+            this.concat_batchid_riskid = new System.Windows.Forms.ComboBox();
+            this.associateloginid_allocation = new System.Windows.Forms.TextBox();
+            this.pagenumber = new System.Windows.Forms.NumericUpDown();
+            this.current_datetime = new System.Windows.Forms.DateTimePicker();
+            this.inquirystatus_associatename = new System.Windows.Forms.ComboBox();
+            this.adminlist = new System.Windows.Forms.ComboBox();
             this.txtRequestIDbatch = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.txtBatchIDbatch = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.txtInquiryIDbatch = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -172,33 +199,6 @@
             this.txtUploadDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.txtUploadTime = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.txtUploadedBy = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.searchby_sourcebu_batchworkflow = new System.Windows.Forms.ComboBox();
-            this.label37 = new System.Windows.Forms.Label();
-            this.searchby_eventlist_batchworkflow = new System.Windows.Forms.TextBox();
-            this.label36 = new System.Windows.Forms.Label();
-            this.searchby_entityid_batchworkflow = new System.Windows.Forms.TextBox();
-            this.label34 = new System.Windows.Forms.Label();
-            this.searchby_associatename_batchworkflow = new System.Windows.Forms.ComboBox();
-            this.label33 = new System.Windows.Forms.Label();
-            this.label32 = new System.Windows.Forms.Label();
-            this.searchby_riskid_batchworkflow = new System.Windows.Forms.TextBox();
-            this.searchby_inquirystatus_batchworkflow = new System.Windows.Forms.ComboBox();
-            this.label26 = new System.Windows.Forms.Label();
-            this.searchby_pagenumber_batchworkflow = new System.Windows.Forms.NumericUpDown();
-            this.label24 = new System.Windows.Forms.Label();
-            this.searchby_partyname_batchworkflow = new System.Windows.Forms.TextBox();
-            this.searchby_trackingid_batchworkflow = new System.Windows.Forms.TextBox();
-            this.searchby_batchid_batchworkflow = new System.Windows.Forms.TextBox();
-            this.label31 = new System.Windows.Forms.Label();
-            this.label30 = new System.Windows.Forms.Label();
-            this.label29 = new System.Windows.Forms.Label();
-            this.concat_batchid_riskid = new System.Windows.Forms.ComboBox();
-            this.associateloginid_allocation = new System.Windows.Forms.TextBox();
-            this.pagenumber = new System.Windows.Forms.NumericUpDown();
-            this.current_datetime = new System.Windows.Forms.DateTimePicker();
-            this.inquirystatus_associatename = new System.Windows.Forms.ComboBox();
-            this.adminlist = new System.Windows.Forms.ComboBox();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.noofhits)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.batchworkflow_datagridview)).BeginInit();
@@ -1244,383 +1244,12 @@
             this.batchworkflow_datagridview.Location = new System.Drawing.Point(22, 91);
             this.batchworkflow_datagridview.Name = "batchworkflow_datagridview";
             this.batchworkflow_datagridview.ReadOnly = true;
+            this.batchworkflow_datagridview.RowHeadersWidth = 62;
             this.batchworkflow_datagridview.RowTemplate.Height = 28;
             this.batchworkflow_datagridview.Size = new System.Drawing.Size(1823, 328);
             this.batchworkflow_datagridview.TabIndex = 134;
             this.batchworkflow_datagridview.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.batchworkflow_datagridview_CellContentClick);
             this.batchworkflow_datagridview.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.batchworkflow_datagridview_CellFormatting);
-            // 
-            // txtRequestIDbatch
-            // 
-            this.txtRequestIDbatch.DataPropertyName = "RequestID";
-            this.txtRequestIDbatch.HeaderText = "RequestID";
-            this.txtRequestIDbatch.Name = "txtRequestIDbatch";
-            this.txtRequestIDbatch.ReadOnly = true;
-            // 
-            // txtBatchIDbatch
-            // 
-            this.txtBatchIDbatch.DataPropertyName = "BatchID";
-            this.txtBatchIDbatch.HeaderText = "BatchID";
-            this.txtBatchIDbatch.Name = "txtBatchIDbatch";
-            this.txtBatchIDbatch.ReadOnly = true;
-            // 
-            // txtInquiryIDbatch
-            // 
-            this.txtInquiryIDbatch.DataPropertyName = "InquiryID";
-            this.txtInquiryIDbatch.HeaderText = "InquiryID";
-            this.txtInquiryIDbatch.Name = "txtInquiryIDbatch";
-            this.txtInquiryIDbatch.ReadOnly = true;
-            // 
-            // txtRiskIDbatch
-            // 
-            this.txtRiskIDbatch.DataPropertyName = "RiskID";
-            this.txtRiskIDbatch.HeaderText = "RiskID";
-            this.txtRiskIDbatch.Name = "txtRiskIDbatch";
-            this.txtRiskIDbatch.ReadOnly = true;
-            // 
-            // txtentityidbatch
-            // 
-            this.txtentityidbatch.DataPropertyName = "EntityID";
-            this.txtentityidbatch.HeaderText = "EntityID";
-            this.txtentityidbatch.Name = "txtentityidbatch";
-            this.txtentityidbatch.ReadOnly = true;
-            // 
-            // txtTrackingIDbatch
-            // 
-            this.txtTrackingIDbatch.DataPropertyName = "TrackingID";
-            this.txtTrackingIDbatch.HeaderText = "TrackingID";
-            this.txtTrackingIDbatch.Name = "txtTrackingIDbatch";
-            this.txtTrackingIDbatch.ReadOnly = true;
-            // 
-            // txtReceivedDatebatch
-            // 
-            this.txtReceivedDatebatch.DataPropertyName = "ReceivedDate";
-            this.txtReceivedDatebatch.HeaderText = "ReceivedDate";
-            this.txtReceivedDatebatch.Name = "txtReceivedDatebatch";
-            this.txtReceivedDatebatch.ReadOnly = true;
-            // 
-            // txtReceivedTimebatch
-            // 
-            this.txtReceivedTimebatch.DataPropertyName = "ReceivedTime";
-            this.txtReceivedTimebatch.HeaderText = "ReceivedTime";
-            this.txtReceivedTimebatch.Name = "txtReceivedTimebatch";
-            this.txtReceivedTimebatch.ReadOnly = true;
-            // 
-            // txtEntityTypebatch
-            // 
-            this.txtEntityTypebatch.DataPropertyName = "EntityType";
-            this.txtEntityTypebatch.HeaderText = "EntityType";
-            this.txtEntityTypebatch.Name = "txtEntityTypebatch";
-            this.txtEntityTypebatch.ReadOnly = true;
-            // 
-            // txtPartyNamebatch
-            // 
-            this.txtPartyNamebatch.DataPropertyName = "PartyName";
-            this.txtPartyNamebatch.HeaderText = "PartyName";
-            this.txtPartyNamebatch.Name = "txtPartyNamebatch";
-            this.txtPartyNamebatch.ReadOnly = true;
-            // 
-            // txtSourceBUbatch
-            // 
-            this.txtSourceBUbatch.DataPropertyName = "SourceBU";
-            this.txtSourceBUbatch.HeaderText = "SourceBU";
-            this.txtSourceBUbatch.Name = "txtSourceBUbatch";
-            this.txtSourceBUbatch.ReadOnly = true;
-            // 
-            // txtNoOfHitsbatch
-            // 
-            this.txtNoOfHitsbatch.DataPropertyName = "NoOfHits";
-            this.txtNoOfHitsbatch.HeaderText = "NoOfHits";
-            this.txtNoOfHitsbatch.Name = "txtNoOfHitsbatch";
-            this.txtNoOfHitsbatch.ReadOnly = true;
-            // 
-            // txtRiskCategorybatch
-            // 
-            this.txtRiskCategorybatch.DataPropertyName = "RiskCategory";
-            this.txtRiskCategorybatch.HeaderText = "RiskCategory";
-            this.txtRiskCategorybatch.Name = "txtRiskCategorybatch";
-            this.txtRiskCategorybatch.ReadOnly = true;
-            // 
-            // txtEventCodesbatch
-            // 
-            this.txtEventCodesbatch.DataPropertyName = "EventCodes";
-            this.txtEventCodesbatch.HeaderText = "EventCodes";
-            this.txtEventCodesbatch.Name = "txtEventCodesbatch";
-            this.txtEventCodesbatch.ReadOnly = true;
-            // 
-            // txtMatchCriteriabatch
-            // 
-            this.txtMatchCriteriabatch.DataPropertyName = "MatchCriteria";
-            this.txtMatchCriteriabatch.HeaderText = "MatchCriteria";
-            this.txtMatchCriteriabatch.Name = "txtMatchCriteriabatch";
-            this.txtMatchCriteriabatch.ReadOnly = true;
-            // 
-            // txtQueryRaisedDatebatch
-            // 
-            this.txtQueryRaisedDatebatch.DataPropertyName = "QueryRaisedDate";
-            this.txtQueryRaisedDatebatch.HeaderText = "QueryRaisedDate";
-            this.txtQueryRaisedDatebatch.Name = "txtQueryRaisedDatebatch";
-            this.txtQueryRaisedDatebatch.ReadOnly = true;
-            // 
-            // txtQueryRaisedTimebatch
-            // 
-            this.txtQueryRaisedTimebatch.DataPropertyName = "QueryRaisedTime";
-            this.txtQueryRaisedTimebatch.HeaderText = "QueryRaisedTime";
-            this.txtQueryRaisedTimebatch.Name = "txtQueryRaisedTimebatch";
-            this.txtQueryRaisedTimebatch.ReadOnly = true;
-            // 
-            // txtQueryResolvedDatebatch
-            // 
-            this.txtQueryResolvedDatebatch.DataPropertyName = "QueryResolvedDate";
-            this.txtQueryResolvedDatebatch.HeaderText = "QueryResolvedDate";
-            this.txtQueryResolvedDatebatch.Name = "txtQueryResolvedDatebatch";
-            this.txtQueryResolvedDatebatch.ReadOnly = true;
-            // 
-            // txtQueryResolvedTimebatch
-            // 
-            this.txtQueryResolvedTimebatch.DataPropertyName = "QueryResolvedTime";
-            this.txtQueryResolvedTimebatch.HeaderText = "QueryResolvedTime";
-            this.txtQueryResolvedTimebatch.Name = "txtQueryResolvedTimebatch";
-            this.txtQueryResolvedTimebatch.ReadOnly = true;
-            // 
-            // txtQueryRemarksbatch
-            // 
-            this.txtQueryRemarksbatch.DataPropertyName = "QueryRemarks";
-            this.txtQueryRemarksbatch.HeaderText = "QueryRemarks";
-            this.txtQueryRemarksbatch.Name = "txtQueryRemarksbatch";
-            this.txtQueryRemarksbatch.ReadOnly = true;
-            // 
-            // txtApprovalRaisedDatebatch
-            // 
-            this.txtApprovalRaisedDatebatch.DataPropertyName = "ApprovalRaisedDate";
-            this.txtApprovalRaisedDatebatch.HeaderText = "ApprovalRaisedDate";
-            this.txtApprovalRaisedDatebatch.Name = "txtApprovalRaisedDatebatch";
-            this.txtApprovalRaisedDatebatch.ReadOnly = true;
-            // 
-            // txtApprovalRaisedTimebatch
-            // 
-            this.txtApprovalRaisedTimebatch.DataPropertyName = "ApprovalRaisedTime";
-            this.txtApprovalRaisedTimebatch.HeaderText = "ApprovalRaisedTime";
-            this.txtApprovalRaisedTimebatch.Name = "txtApprovalRaisedTimebatch";
-            this.txtApprovalRaisedTimebatch.ReadOnly = true;
-            // 
-            // txtApprovalReceivedDatebatch
-            // 
-            this.txtApprovalReceivedDatebatch.DataPropertyName = "ApprovalReceivedDate";
-            this.txtApprovalReceivedDatebatch.HeaderText = "ApprovalReceivedDate";
-            this.txtApprovalReceivedDatebatch.Name = "txtApprovalReceivedDatebatch";
-            this.txtApprovalReceivedDatebatch.ReadOnly = true;
-            // 
-            // txtApprovalReceivedTimebatch
-            // 
-            this.txtApprovalReceivedTimebatch.DataPropertyName = "ApprovalReceivedTime";
-            this.txtApprovalReceivedTimebatch.HeaderText = "ApprovalReceivedTime";
-            this.txtApprovalReceivedTimebatch.Name = "txtApprovalReceivedTimebatch";
-            this.txtApprovalReceivedTimebatch.ReadOnly = true;
-            // 
-            // txtTypeOfApprovalbatch
-            // 
-            this.txtTypeOfApprovalbatch.DataPropertyName = "TypeOfApproval";
-            this.txtTypeOfApprovalbatch.HeaderText = "TypeOfApproval";
-            this.txtTypeOfApprovalbatch.Name = "txtTypeOfApprovalbatch";
-            this.txtTypeOfApprovalbatch.ReadOnly = true;
-            // 
-            // txtApprovedBy
-            // 
-            this.txtApprovedBy.DataPropertyName = "ApprovedBy";
-            this.txtApprovedBy.HeaderText = "ApprovedBy";
-            this.txtApprovedBy.Name = "txtApprovedBy";
-            this.txtApprovedBy.ReadOnly = true;
-            // 
-            // txtCompletionDatebatch
-            // 
-            this.txtCompletionDatebatch.DataPropertyName = "CompletionDate";
-            this.txtCompletionDatebatch.HeaderText = "CompletionDate";
-            this.txtCompletionDatebatch.Name = "txtCompletionDatebatch";
-            this.txtCompletionDatebatch.ReadOnly = true;
-            // 
-            // txtCompletionTimebatch
-            // 
-            this.txtCompletionTimebatch.DataPropertyName = "CompletionTime";
-            this.txtCompletionTimebatch.HeaderText = "CompletionTime";
-            this.txtCompletionTimebatch.Name = "txtCompletionTimebatch";
-            this.txtCompletionTimebatch.ReadOnly = true;
-            // 
-            // txtSMSORaisedDatebatch
-            // 
-            this.txtSMSORaisedDatebatch.DataPropertyName = "SMSORaisedDate";
-            this.txtSMSORaisedDatebatch.HeaderText = "SMSORaisedDate";
-            this.txtSMSORaisedDatebatch.Name = "txtSMSORaisedDatebatch";
-            this.txtSMSORaisedDatebatch.ReadOnly = true;
-            // 
-            // txtSMSORaisedTimebatch
-            // 
-            this.txtSMSORaisedTimebatch.DataPropertyName = "SMSORaisedTime";
-            this.txtSMSORaisedTimebatch.HeaderText = "SMSORaisedTime";
-            this.txtSMSORaisedTimebatch.Name = "txtSMSORaisedTimebatch";
-            this.txtSMSORaisedTimebatch.ReadOnly = true;
-            // 
-            // txtSMSOReceivedDatebatch
-            // 
-            this.txtSMSOReceivedDatebatch.DataPropertyName = "SMSOReceivedDate";
-            this.txtSMSOReceivedDatebatch.HeaderText = "SMSOReceivedDate";
-            this.txtSMSOReceivedDatebatch.Name = "txtSMSOReceivedDatebatch";
-            this.txtSMSOReceivedDatebatch.ReadOnly = true;
-            // 
-            // txtSMSOReceivedTimebatch
-            // 
-            this.txtSMSOReceivedTimebatch.DataPropertyName = "SMSOReceivedTime";
-            this.txtSMSOReceivedTimebatch.HeaderText = "SMSOReceivedTime";
-            this.txtSMSOReceivedTimebatch.Name = "txtSMSOReceivedTimebatch";
-            this.txtSMSOReceivedTimebatch.ReadOnly = true;
-            // 
-            // txtSMSOApprovedBybatch
-            // 
-            this.txtSMSOApprovedBybatch.DataPropertyName = "SMSOApprovedBy";
-            this.txtSMSOApprovedBybatch.HeaderText = "SMSOApprovedBy";
-            this.txtSMSOApprovedBybatch.Name = "txtSMSOApprovedBybatch";
-            this.txtSMSOApprovedBybatch.ReadOnly = true;
-            // 
-            // txtApprovalRejectionCommentbatch
-            // 
-            this.txtApprovalRejectionCommentbatch.DataPropertyName = "ApprovalRejectionComment";
-            this.txtApprovalRejectionCommentbatch.HeaderText = "ApprovalRejectionComment";
-            this.txtApprovalRejectionCommentbatch.Name = "txtApprovalRejectionCommentbatch";
-            this.txtApprovalRejectionCommentbatch.ReadOnly = true;
-            // 
-            // txtChaser1Datebatch
-            // 
-            this.txtChaser1Datebatch.DataPropertyName = "Chaser1Date";
-            this.txtChaser1Datebatch.HeaderText = "Chaser1Date";
-            this.txtChaser1Datebatch.Name = "txtChaser1Datebatch";
-            this.txtChaser1Datebatch.ReadOnly = true;
-            // 
-            // txtChaser2Datebatch
-            // 
-            this.txtChaser2Datebatch.DataPropertyName = "Chaser2Date";
-            this.txtChaser2Datebatch.HeaderText = "Chaser2Date";
-            this.txtChaser2Datebatch.Name = "txtChaser2Datebatch";
-            this.txtChaser2Datebatch.ReadOnly = true;
-            // 
-            // txtChaser3Datebatch
-            // 
-            this.txtChaser3Datebatch.DataPropertyName = "Chaser3Date";
-            this.txtChaser3Datebatch.HeaderText = "Chaser3Date";
-            this.txtChaser3Datebatch.Name = "txtChaser3Datebatch";
-            this.txtChaser3Datebatch.ReadOnly = true;
-            // 
-            // txtRequestorEmailAddressbatch
-            // 
-            this.txtRequestorEmailAddressbatch.DataPropertyName = "RequestorEmailAddress";
-            this.txtRequestorEmailAddressbatch.HeaderText = "RequestorEmailAddress";
-            this.txtRequestorEmailAddressbatch.Name = "txtRequestorEmailAddressbatch";
-            this.txtRequestorEmailAddressbatch.ReadOnly = true;
-            // 
-            // txtFinalStatusbatch
-            // 
-            this.txtFinalStatusbatch.DataPropertyName = "FinalStatus";
-            this.txtFinalStatusbatch.HeaderText = "FinalStatus";
-            this.txtFinalStatusbatch.Name = "txtFinalStatusbatch";
-            this.txtFinalStatusbatch.ReadOnly = true;
-            this.txtFinalStatusbatch.Visible = false;
-            // 
-            // txtPageNumber
-            // 
-            this.txtPageNumber.DataPropertyName = "PageNumber";
-            this.txtPageNumber.HeaderText = "PageNumber";
-            this.txtPageNumber.Name = "txtPageNumber";
-            this.txtPageNumber.ReadOnly = true;
-            // 
-            // txtInquiryStatus
-            // 
-            this.txtInquiryStatus.DataPropertyName = "InquiryStatus";
-            this.txtInquiryStatus.HeaderText = "InquiryStatus";
-            this.txtInquiryStatus.Name = "txtInquiryStatus";
-            this.txtInquiryStatus.ReadOnly = true;
-            // 
-            // txtAssociateName_Allocation
-            // 
-            this.txtAssociateName_Allocation.DataPropertyName = "AssociateName_Allocation";
-            this.txtAssociateName_Allocation.HeaderText = "AssociateName_Allocation";
-            this.txtAssociateName_Allocation.Name = "txtAssociateName_Allocation";
-            this.txtAssociateName_Allocation.ReadOnly = true;
-            // 
-            // txtAssociateLoginID_Allocation
-            // 
-            this.txtAssociateLoginID_Allocation.DataPropertyName = "AssociateLoginID_Allocation";
-            this.txtAssociateLoginID_Allocation.HeaderText = "AssociateLoginID_Allocation";
-            this.txtAssociateLoginID_Allocation.Name = "txtAssociateLoginID_Allocation";
-            this.txtAssociateLoginID_Allocation.ReadOnly = true;
-            // 
-            // txtAllocationDate
-            // 
-            this.txtAllocationDate.DataPropertyName = "AllocationDate";
-            this.txtAllocationDate.HeaderText = "AllocationDate";
-            this.txtAllocationDate.Name = "txtAllocationDate";
-            this.txtAllocationDate.ReadOnly = true;
-            // 
-            // txtAllocationTime
-            // 
-            this.txtAllocationTime.DataPropertyName = "AllocationTime";
-            this.txtAllocationTime.HeaderText = "AllocationTime";
-            this.txtAllocationTime.Name = "txtAllocationTime";
-            this.txtAllocationTime.ReadOnly = true;
-            // 
-            // txtAllocatedBy
-            // 
-            this.txtAllocatedBy.DataPropertyName = "AllocatedBy";
-            this.txtAllocatedBy.HeaderText = "AllocatedBy";
-            this.txtAllocatedBy.Name = "txtAllocatedBy";
-            this.txtAllocatedBy.ReadOnly = true;
-            // 
-            // txtProjectNonProject
-            // 
-            this.txtProjectNonProject.DataPropertyName = "ProjectNonProject";
-            this.txtProjectNonProject.HeaderText = "ProjectNonProject";
-            this.txtProjectNonProject.Name = "txtProjectNonProject";
-            this.txtProjectNonProject.ReadOnly = true;
-            // 
-            // txtProject_LastUpdatedBy
-            // 
-            this.txtProject_LastUpdatedBy.DataPropertyName = "Project_LastUpdatedBy";
-            this.txtProject_LastUpdatedBy.HeaderText = "Project_LastUpdatedBy";
-            this.txtProject_LastUpdatedBy.Name = "txtProject_LastUpdatedBy";
-            this.txtProject_LastUpdatedBy.ReadOnly = true;
-            // 
-            // txtProject_LastUpdatedDate
-            // 
-            this.txtProject_LastUpdatedDate.DataPropertyName = "Project_LastUpdatedDate";
-            this.txtProject_LastUpdatedDate.HeaderText = "Project_LastUpdatedDate";
-            this.txtProject_LastUpdatedDate.Name = "txtProject_LastUpdatedDate";
-            this.txtProject_LastUpdatedDate.ReadOnly = true;
-            // 
-            // txtProject_LastUpdatedTime
-            // 
-            this.txtProject_LastUpdatedTime.DataPropertyName = "Project_LastUpdatedTime";
-            this.txtProject_LastUpdatedTime.HeaderText = "Project_LastUpdatedTime";
-            this.txtProject_LastUpdatedTime.Name = "txtProject_LastUpdatedTime";
-            this.txtProject_LastUpdatedTime.ReadOnly = true;
-            // 
-            // txtUploadDate
-            // 
-            this.txtUploadDate.DataPropertyName = "UploadDate";
-            this.txtUploadDate.HeaderText = "UploadDate";
-            this.txtUploadDate.Name = "txtUploadDate";
-            this.txtUploadDate.ReadOnly = true;
-            // 
-            // txtUploadTime
-            // 
-            this.txtUploadTime.DataPropertyName = "UploadTime";
-            this.txtUploadTime.HeaderText = "UploadTime";
-            this.txtUploadTime.Name = "txtUploadTime";
-            this.txtUploadTime.ReadOnly = true;
-            // 
-            // txtUploadedBy
-            // 
-            this.txtUploadedBy.DataPropertyName = "UploadedBy";
-            this.txtUploadedBy.HeaderText = "UploadedBy";
-            this.txtUploadedBy.Name = "txtUploadedBy";
-            this.txtUploadedBy.ReadOnly = true;
             // 
             // groupBox3
             // 
@@ -1892,6 +1521,483 @@
             this.adminlist.Size = new System.Drawing.Size(121, 28);
             this.adminlist.TabIndex = 147;
             // 
+            // txtRequestIDbatch
+            // 
+            this.txtRequestIDbatch.DataPropertyName = "RequestID";
+            this.txtRequestIDbatch.HeaderText = "RequestID";
+            this.txtRequestIDbatch.MinimumWidth = 8;
+            this.txtRequestIDbatch.Name = "txtRequestIDbatch";
+            this.txtRequestIDbatch.ReadOnly = true;
+            this.txtRequestIDbatch.Width = 150;
+            // 
+            // txtBatchIDbatch
+            // 
+            this.txtBatchIDbatch.DataPropertyName = "BatchID";
+            this.txtBatchIDbatch.HeaderText = "BatchID";
+            this.txtBatchIDbatch.MinimumWidth = 8;
+            this.txtBatchIDbatch.Name = "txtBatchIDbatch";
+            this.txtBatchIDbatch.ReadOnly = true;
+            this.txtBatchIDbatch.Width = 150;
+            // 
+            // txtInquiryIDbatch
+            // 
+            this.txtInquiryIDbatch.DataPropertyName = "InquiryID";
+            this.txtInquiryIDbatch.HeaderText = "InquiryID";
+            this.txtInquiryIDbatch.MinimumWidth = 8;
+            this.txtInquiryIDbatch.Name = "txtInquiryIDbatch";
+            this.txtInquiryIDbatch.ReadOnly = true;
+            this.txtInquiryIDbatch.Width = 150;
+            // 
+            // txtRiskIDbatch
+            // 
+            this.txtRiskIDbatch.DataPropertyName = "RiskID";
+            this.txtRiskIDbatch.HeaderText = "RiskID";
+            this.txtRiskIDbatch.MinimumWidth = 8;
+            this.txtRiskIDbatch.Name = "txtRiskIDbatch";
+            this.txtRiskIDbatch.ReadOnly = true;
+            this.txtRiskIDbatch.Width = 150;
+            // 
+            // txtentityidbatch
+            // 
+            this.txtentityidbatch.DataPropertyName = "EntityID";
+            this.txtentityidbatch.HeaderText = "EntityID";
+            this.txtentityidbatch.MinimumWidth = 8;
+            this.txtentityidbatch.Name = "txtentityidbatch";
+            this.txtentityidbatch.ReadOnly = true;
+            this.txtentityidbatch.Width = 150;
+            // 
+            // txtTrackingIDbatch
+            // 
+            this.txtTrackingIDbatch.DataPropertyName = "TrackingID";
+            this.txtTrackingIDbatch.HeaderText = "TrackingID";
+            this.txtTrackingIDbatch.MinimumWidth = 8;
+            this.txtTrackingIDbatch.Name = "txtTrackingIDbatch";
+            this.txtTrackingIDbatch.ReadOnly = true;
+            this.txtTrackingIDbatch.Width = 150;
+            // 
+            // txtReceivedDatebatch
+            // 
+            this.txtReceivedDatebatch.DataPropertyName = "ReceivedDate";
+            this.txtReceivedDatebatch.HeaderText = "ReceivedDate";
+            this.txtReceivedDatebatch.MinimumWidth = 8;
+            this.txtReceivedDatebatch.Name = "txtReceivedDatebatch";
+            this.txtReceivedDatebatch.ReadOnly = true;
+            this.txtReceivedDatebatch.Width = 150;
+            // 
+            // txtReceivedTimebatch
+            // 
+            this.txtReceivedTimebatch.DataPropertyName = "ReceivedTime";
+            this.txtReceivedTimebatch.HeaderText = "ReceivedTime";
+            this.txtReceivedTimebatch.MinimumWidth = 8;
+            this.txtReceivedTimebatch.Name = "txtReceivedTimebatch";
+            this.txtReceivedTimebatch.ReadOnly = true;
+            this.txtReceivedTimebatch.Width = 150;
+            // 
+            // txtEntityTypebatch
+            // 
+            this.txtEntityTypebatch.DataPropertyName = "EntityType";
+            this.txtEntityTypebatch.HeaderText = "EntityType";
+            this.txtEntityTypebatch.MinimumWidth = 8;
+            this.txtEntityTypebatch.Name = "txtEntityTypebatch";
+            this.txtEntityTypebatch.ReadOnly = true;
+            this.txtEntityTypebatch.Width = 150;
+            // 
+            // txtPartyNamebatch
+            // 
+            this.txtPartyNamebatch.DataPropertyName = "PartyName";
+            this.txtPartyNamebatch.HeaderText = "PartyName";
+            this.txtPartyNamebatch.MinimumWidth = 8;
+            this.txtPartyNamebatch.Name = "txtPartyNamebatch";
+            this.txtPartyNamebatch.ReadOnly = true;
+            this.txtPartyNamebatch.Width = 150;
+            // 
+            // txtSourceBUbatch
+            // 
+            this.txtSourceBUbatch.DataPropertyName = "SourceBU";
+            this.txtSourceBUbatch.HeaderText = "SourceBU";
+            this.txtSourceBUbatch.MinimumWidth = 8;
+            this.txtSourceBUbatch.Name = "txtSourceBUbatch";
+            this.txtSourceBUbatch.ReadOnly = true;
+            this.txtSourceBUbatch.Width = 150;
+            // 
+            // txtNoOfHitsbatch
+            // 
+            this.txtNoOfHitsbatch.DataPropertyName = "NoOfHits";
+            this.txtNoOfHitsbatch.HeaderText = "NoOfHits";
+            this.txtNoOfHitsbatch.MinimumWidth = 8;
+            this.txtNoOfHitsbatch.Name = "txtNoOfHitsbatch";
+            this.txtNoOfHitsbatch.ReadOnly = true;
+            this.txtNoOfHitsbatch.Width = 150;
+            // 
+            // txtRiskCategorybatch
+            // 
+            this.txtRiskCategorybatch.DataPropertyName = "RiskCategory";
+            this.txtRiskCategorybatch.HeaderText = "RiskCategory";
+            this.txtRiskCategorybatch.MinimumWidth = 8;
+            this.txtRiskCategorybatch.Name = "txtRiskCategorybatch";
+            this.txtRiskCategorybatch.ReadOnly = true;
+            this.txtRiskCategorybatch.Width = 150;
+            // 
+            // txtEventCodesbatch
+            // 
+            this.txtEventCodesbatch.DataPropertyName = "EventCodes";
+            this.txtEventCodesbatch.HeaderText = "EventCodes";
+            this.txtEventCodesbatch.MinimumWidth = 8;
+            this.txtEventCodesbatch.Name = "txtEventCodesbatch";
+            this.txtEventCodesbatch.ReadOnly = true;
+            this.txtEventCodesbatch.Width = 150;
+            // 
+            // txtMatchCriteriabatch
+            // 
+            this.txtMatchCriteriabatch.DataPropertyName = "MatchCriteria";
+            this.txtMatchCriteriabatch.HeaderText = "MatchCriteria";
+            this.txtMatchCriteriabatch.MinimumWidth = 8;
+            this.txtMatchCriteriabatch.Name = "txtMatchCriteriabatch";
+            this.txtMatchCriteriabatch.ReadOnly = true;
+            this.txtMatchCriteriabatch.Width = 150;
+            // 
+            // txtQueryRaisedDatebatch
+            // 
+            this.txtQueryRaisedDatebatch.DataPropertyName = "QueryRaisedDate";
+            this.txtQueryRaisedDatebatch.HeaderText = "QueryRaisedDate";
+            this.txtQueryRaisedDatebatch.MinimumWidth = 8;
+            this.txtQueryRaisedDatebatch.Name = "txtQueryRaisedDatebatch";
+            this.txtQueryRaisedDatebatch.ReadOnly = true;
+            this.txtQueryRaisedDatebatch.Width = 150;
+            // 
+            // txtQueryRaisedTimebatch
+            // 
+            this.txtQueryRaisedTimebatch.DataPropertyName = "QueryRaisedTime";
+            this.txtQueryRaisedTimebatch.HeaderText = "QueryRaisedTime";
+            this.txtQueryRaisedTimebatch.MinimumWidth = 8;
+            this.txtQueryRaisedTimebatch.Name = "txtQueryRaisedTimebatch";
+            this.txtQueryRaisedTimebatch.ReadOnly = true;
+            this.txtQueryRaisedTimebatch.Width = 150;
+            // 
+            // txtQueryResolvedDatebatch
+            // 
+            this.txtQueryResolvedDatebatch.DataPropertyName = "QueryResolvedDate";
+            this.txtQueryResolvedDatebatch.HeaderText = "QueryResolvedDate";
+            this.txtQueryResolvedDatebatch.MinimumWidth = 8;
+            this.txtQueryResolvedDatebatch.Name = "txtQueryResolvedDatebatch";
+            this.txtQueryResolvedDatebatch.ReadOnly = true;
+            this.txtQueryResolvedDatebatch.Width = 150;
+            // 
+            // txtQueryResolvedTimebatch
+            // 
+            this.txtQueryResolvedTimebatch.DataPropertyName = "QueryResolvedTime";
+            this.txtQueryResolvedTimebatch.HeaderText = "QueryResolvedTime";
+            this.txtQueryResolvedTimebatch.MinimumWidth = 8;
+            this.txtQueryResolvedTimebatch.Name = "txtQueryResolvedTimebatch";
+            this.txtQueryResolvedTimebatch.ReadOnly = true;
+            this.txtQueryResolvedTimebatch.Width = 150;
+            // 
+            // txtQueryRemarksbatch
+            // 
+            this.txtQueryRemarksbatch.DataPropertyName = "QueryRemarks";
+            this.txtQueryRemarksbatch.HeaderText = "QueryRemarks";
+            this.txtQueryRemarksbatch.MinimumWidth = 8;
+            this.txtQueryRemarksbatch.Name = "txtQueryRemarksbatch";
+            this.txtQueryRemarksbatch.ReadOnly = true;
+            this.txtQueryRemarksbatch.Width = 150;
+            // 
+            // txtApprovalRaisedDatebatch
+            // 
+            this.txtApprovalRaisedDatebatch.DataPropertyName = "ApprovalRaisedDate";
+            this.txtApprovalRaisedDatebatch.HeaderText = "ApprovalRaisedDate";
+            this.txtApprovalRaisedDatebatch.MinimumWidth = 8;
+            this.txtApprovalRaisedDatebatch.Name = "txtApprovalRaisedDatebatch";
+            this.txtApprovalRaisedDatebatch.ReadOnly = true;
+            this.txtApprovalRaisedDatebatch.Width = 150;
+            // 
+            // txtApprovalRaisedTimebatch
+            // 
+            this.txtApprovalRaisedTimebatch.DataPropertyName = "ApprovalRaisedTime";
+            this.txtApprovalRaisedTimebatch.HeaderText = "ApprovalRaisedTime";
+            this.txtApprovalRaisedTimebatch.MinimumWidth = 8;
+            this.txtApprovalRaisedTimebatch.Name = "txtApprovalRaisedTimebatch";
+            this.txtApprovalRaisedTimebatch.ReadOnly = true;
+            this.txtApprovalRaisedTimebatch.Width = 150;
+            // 
+            // txtApprovalReceivedDatebatch
+            // 
+            this.txtApprovalReceivedDatebatch.DataPropertyName = "ApprovalReceivedDate";
+            this.txtApprovalReceivedDatebatch.HeaderText = "ApprovalReceivedDate";
+            this.txtApprovalReceivedDatebatch.MinimumWidth = 8;
+            this.txtApprovalReceivedDatebatch.Name = "txtApprovalReceivedDatebatch";
+            this.txtApprovalReceivedDatebatch.ReadOnly = true;
+            this.txtApprovalReceivedDatebatch.Width = 150;
+            // 
+            // txtApprovalReceivedTimebatch
+            // 
+            this.txtApprovalReceivedTimebatch.DataPropertyName = "ApprovalReceivedTime";
+            this.txtApprovalReceivedTimebatch.HeaderText = "ApprovalReceivedTime";
+            this.txtApprovalReceivedTimebatch.MinimumWidth = 8;
+            this.txtApprovalReceivedTimebatch.Name = "txtApprovalReceivedTimebatch";
+            this.txtApprovalReceivedTimebatch.ReadOnly = true;
+            this.txtApprovalReceivedTimebatch.Width = 150;
+            // 
+            // txtTypeOfApprovalbatch
+            // 
+            this.txtTypeOfApprovalbatch.DataPropertyName = "TypeOfApproval";
+            this.txtTypeOfApprovalbatch.HeaderText = "TypeOfApproval";
+            this.txtTypeOfApprovalbatch.MinimumWidth = 8;
+            this.txtTypeOfApprovalbatch.Name = "txtTypeOfApprovalbatch";
+            this.txtTypeOfApprovalbatch.ReadOnly = true;
+            this.txtTypeOfApprovalbatch.Width = 150;
+            // 
+            // txtApprovedBy
+            // 
+            this.txtApprovedBy.DataPropertyName = "ApprovedBy";
+            this.txtApprovedBy.HeaderText = "ApprovedBy";
+            this.txtApprovedBy.MinimumWidth = 8;
+            this.txtApprovedBy.Name = "txtApprovedBy";
+            this.txtApprovedBy.ReadOnly = true;
+            this.txtApprovedBy.Width = 150;
+            // 
+            // txtCompletionDatebatch
+            // 
+            this.txtCompletionDatebatch.DataPropertyName = "CompletionDate";
+            this.txtCompletionDatebatch.HeaderText = "CompletionDate";
+            this.txtCompletionDatebatch.MinimumWidth = 8;
+            this.txtCompletionDatebatch.Name = "txtCompletionDatebatch";
+            this.txtCompletionDatebatch.ReadOnly = true;
+            this.txtCompletionDatebatch.Width = 150;
+            // 
+            // txtCompletionTimebatch
+            // 
+            this.txtCompletionTimebatch.DataPropertyName = "CompletionTime";
+            this.txtCompletionTimebatch.HeaderText = "CompletionTime";
+            this.txtCompletionTimebatch.MinimumWidth = 8;
+            this.txtCompletionTimebatch.Name = "txtCompletionTimebatch";
+            this.txtCompletionTimebatch.ReadOnly = true;
+            this.txtCompletionTimebatch.Width = 150;
+            // 
+            // txtSMSORaisedDatebatch
+            // 
+            this.txtSMSORaisedDatebatch.DataPropertyName = "SMSORaisedDate";
+            this.txtSMSORaisedDatebatch.HeaderText = "SMSORaisedDate";
+            this.txtSMSORaisedDatebatch.MinimumWidth = 8;
+            this.txtSMSORaisedDatebatch.Name = "txtSMSORaisedDatebatch";
+            this.txtSMSORaisedDatebatch.ReadOnly = true;
+            this.txtSMSORaisedDatebatch.Width = 150;
+            // 
+            // txtSMSORaisedTimebatch
+            // 
+            this.txtSMSORaisedTimebatch.DataPropertyName = "SMSORaisedTime";
+            this.txtSMSORaisedTimebatch.HeaderText = "SMSORaisedTime";
+            this.txtSMSORaisedTimebatch.MinimumWidth = 8;
+            this.txtSMSORaisedTimebatch.Name = "txtSMSORaisedTimebatch";
+            this.txtSMSORaisedTimebatch.ReadOnly = true;
+            this.txtSMSORaisedTimebatch.Width = 150;
+            // 
+            // txtSMSOReceivedDatebatch
+            // 
+            this.txtSMSOReceivedDatebatch.DataPropertyName = "SMSOReceivedDate";
+            this.txtSMSOReceivedDatebatch.HeaderText = "SMSOReceivedDate";
+            this.txtSMSOReceivedDatebatch.MinimumWidth = 8;
+            this.txtSMSOReceivedDatebatch.Name = "txtSMSOReceivedDatebatch";
+            this.txtSMSOReceivedDatebatch.ReadOnly = true;
+            this.txtSMSOReceivedDatebatch.Width = 150;
+            // 
+            // txtSMSOReceivedTimebatch
+            // 
+            this.txtSMSOReceivedTimebatch.DataPropertyName = "SMSOReceivedTime";
+            this.txtSMSOReceivedTimebatch.HeaderText = "SMSOReceivedTime";
+            this.txtSMSOReceivedTimebatch.MinimumWidth = 8;
+            this.txtSMSOReceivedTimebatch.Name = "txtSMSOReceivedTimebatch";
+            this.txtSMSOReceivedTimebatch.ReadOnly = true;
+            this.txtSMSOReceivedTimebatch.Width = 150;
+            // 
+            // txtSMSOApprovedBybatch
+            // 
+            this.txtSMSOApprovedBybatch.DataPropertyName = "SMSOApprovedBy";
+            this.txtSMSOApprovedBybatch.HeaderText = "SMSOApprovedBy";
+            this.txtSMSOApprovedBybatch.MinimumWidth = 8;
+            this.txtSMSOApprovedBybatch.Name = "txtSMSOApprovedBybatch";
+            this.txtSMSOApprovedBybatch.ReadOnly = true;
+            this.txtSMSOApprovedBybatch.Width = 150;
+            // 
+            // txtApprovalRejectionCommentbatch
+            // 
+            this.txtApprovalRejectionCommentbatch.DataPropertyName = "ApprovalRejectionComment";
+            this.txtApprovalRejectionCommentbatch.HeaderText = "ApprovalRejectionComment";
+            this.txtApprovalRejectionCommentbatch.MinimumWidth = 8;
+            this.txtApprovalRejectionCommentbatch.Name = "txtApprovalRejectionCommentbatch";
+            this.txtApprovalRejectionCommentbatch.ReadOnly = true;
+            this.txtApprovalRejectionCommentbatch.Width = 150;
+            // 
+            // txtChaser1Datebatch
+            // 
+            this.txtChaser1Datebatch.DataPropertyName = "Chaser1Date";
+            this.txtChaser1Datebatch.HeaderText = "Chaser1Date";
+            this.txtChaser1Datebatch.MinimumWidth = 8;
+            this.txtChaser1Datebatch.Name = "txtChaser1Datebatch";
+            this.txtChaser1Datebatch.ReadOnly = true;
+            this.txtChaser1Datebatch.Width = 150;
+            // 
+            // txtChaser2Datebatch
+            // 
+            this.txtChaser2Datebatch.DataPropertyName = "Chaser2Date";
+            this.txtChaser2Datebatch.HeaderText = "Chaser2Date";
+            this.txtChaser2Datebatch.MinimumWidth = 8;
+            this.txtChaser2Datebatch.Name = "txtChaser2Datebatch";
+            this.txtChaser2Datebatch.ReadOnly = true;
+            this.txtChaser2Datebatch.Width = 150;
+            // 
+            // txtChaser3Datebatch
+            // 
+            this.txtChaser3Datebatch.DataPropertyName = "Chaser3Date";
+            this.txtChaser3Datebatch.HeaderText = "Chaser3Date";
+            this.txtChaser3Datebatch.MinimumWidth = 8;
+            this.txtChaser3Datebatch.Name = "txtChaser3Datebatch";
+            this.txtChaser3Datebatch.ReadOnly = true;
+            this.txtChaser3Datebatch.Width = 150;
+            // 
+            // txtRequestorEmailAddressbatch
+            // 
+            this.txtRequestorEmailAddressbatch.DataPropertyName = "RequestorEmailAddress";
+            this.txtRequestorEmailAddressbatch.HeaderText = "RequestorEmailAddress";
+            this.txtRequestorEmailAddressbatch.MinimumWidth = 8;
+            this.txtRequestorEmailAddressbatch.Name = "txtRequestorEmailAddressbatch";
+            this.txtRequestorEmailAddressbatch.ReadOnly = true;
+            this.txtRequestorEmailAddressbatch.Width = 150;
+            // 
+            // txtFinalStatusbatch
+            // 
+            this.txtFinalStatusbatch.DataPropertyName = "FinalStatus";
+            this.txtFinalStatusbatch.HeaderText = "FinalStatus";
+            this.txtFinalStatusbatch.MinimumWidth = 8;
+            this.txtFinalStatusbatch.Name = "txtFinalStatusbatch";
+            this.txtFinalStatusbatch.ReadOnly = true;
+            this.txtFinalStatusbatch.Width = 150;
+            // 
+            // txtPageNumber
+            // 
+            this.txtPageNumber.DataPropertyName = "PageNumber";
+            this.txtPageNumber.HeaderText = "PageNumber";
+            this.txtPageNumber.MinimumWidth = 8;
+            this.txtPageNumber.Name = "txtPageNumber";
+            this.txtPageNumber.ReadOnly = true;
+            this.txtPageNumber.Width = 150;
+            // 
+            // txtInquiryStatus
+            // 
+            this.txtInquiryStatus.DataPropertyName = "InquiryStatus";
+            this.txtInquiryStatus.HeaderText = "InquiryStatus";
+            this.txtInquiryStatus.MinimumWidth = 8;
+            this.txtInquiryStatus.Name = "txtInquiryStatus";
+            this.txtInquiryStatus.ReadOnly = true;
+            this.txtInquiryStatus.Width = 150;
+            // 
+            // txtAssociateName_Allocation
+            // 
+            this.txtAssociateName_Allocation.DataPropertyName = "AssociateName_Allocation";
+            this.txtAssociateName_Allocation.HeaderText = "AssociateName_Allocation";
+            this.txtAssociateName_Allocation.MinimumWidth = 8;
+            this.txtAssociateName_Allocation.Name = "txtAssociateName_Allocation";
+            this.txtAssociateName_Allocation.ReadOnly = true;
+            this.txtAssociateName_Allocation.Width = 150;
+            // 
+            // txtAssociateLoginID_Allocation
+            // 
+            this.txtAssociateLoginID_Allocation.DataPropertyName = "AssociateLoginID_Allocation";
+            this.txtAssociateLoginID_Allocation.HeaderText = "AssociateLoginID_Allocation";
+            this.txtAssociateLoginID_Allocation.MinimumWidth = 8;
+            this.txtAssociateLoginID_Allocation.Name = "txtAssociateLoginID_Allocation";
+            this.txtAssociateLoginID_Allocation.ReadOnly = true;
+            this.txtAssociateLoginID_Allocation.Width = 150;
+            // 
+            // txtAllocationDate
+            // 
+            this.txtAllocationDate.DataPropertyName = "AllocationDate";
+            this.txtAllocationDate.HeaderText = "AllocationDate";
+            this.txtAllocationDate.MinimumWidth = 8;
+            this.txtAllocationDate.Name = "txtAllocationDate";
+            this.txtAllocationDate.ReadOnly = true;
+            this.txtAllocationDate.Width = 150;
+            // 
+            // txtAllocationTime
+            // 
+            this.txtAllocationTime.DataPropertyName = "AllocationTime";
+            this.txtAllocationTime.HeaderText = "AllocationTime";
+            this.txtAllocationTime.MinimumWidth = 8;
+            this.txtAllocationTime.Name = "txtAllocationTime";
+            this.txtAllocationTime.ReadOnly = true;
+            this.txtAllocationTime.Width = 150;
+            // 
+            // txtAllocatedBy
+            // 
+            this.txtAllocatedBy.DataPropertyName = "AllocatedBy";
+            this.txtAllocatedBy.HeaderText = "AllocatedBy";
+            this.txtAllocatedBy.MinimumWidth = 8;
+            this.txtAllocatedBy.Name = "txtAllocatedBy";
+            this.txtAllocatedBy.ReadOnly = true;
+            this.txtAllocatedBy.Width = 150;
+            // 
+            // txtProjectNonProject
+            // 
+            this.txtProjectNonProject.DataPropertyName = "ProjectNonProject";
+            this.txtProjectNonProject.HeaderText = "ProjectNonProject";
+            this.txtProjectNonProject.MinimumWidth = 8;
+            this.txtProjectNonProject.Name = "txtProjectNonProject";
+            this.txtProjectNonProject.ReadOnly = true;
+            this.txtProjectNonProject.Width = 150;
+            // 
+            // txtProject_LastUpdatedBy
+            // 
+            this.txtProject_LastUpdatedBy.DataPropertyName = "Project_LastUpdatedBy";
+            this.txtProject_LastUpdatedBy.HeaderText = "Project_LastUpdatedBy";
+            this.txtProject_LastUpdatedBy.MinimumWidth = 8;
+            this.txtProject_LastUpdatedBy.Name = "txtProject_LastUpdatedBy";
+            this.txtProject_LastUpdatedBy.ReadOnly = true;
+            this.txtProject_LastUpdatedBy.Width = 150;
+            // 
+            // txtProject_LastUpdatedDate
+            // 
+            this.txtProject_LastUpdatedDate.DataPropertyName = "Project_LastUpdatedDate";
+            this.txtProject_LastUpdatedDate.HeaderText = "Project_LastUpdatedDate";
+            this.txtProject_LastUpdatedDate.MinimumWidth = 8;
+            this.txtProject_LastUpdatedDate.Name = "txtProject_LastUpdatedDate";
+            this.txtProject_LastUpdatedDate.ReadOnly = true;
+            this.txtProject_LastUpdatedDate.Width = 150;
+            // 
+            // txtProject_LastUpdatedTime
+            // 
+            this.txtProject_LastUpdatedTime.DataPropertyName = "Project_LastUpdatedTime";
+            this.txtProject_LastUpdatedTime.HeaderText = "Project_LastUpdatedTime";
+            this.txtProject_LastUpdatedTime.MinimumWidth = 8;
+            this.txtProject_LastUpdatedTime.Name = "txtProject_LastUpdatedTime";
+            this.txtProject_LastUpdatedTime.ReadOnly = true;
+            this.txtProject_LastUpdatedTime.Width = 150;
+            // 
+            // txtUploadDate
+            // 
+            this.txtUploadDate.DataPropertyName = "UploadDate";
+            this.txtUploadDate.HeaderText = "UploadDate";
+            this.txtUploadDate.MinimumWidth = 8;
+            this.txtUploadDate.Name = "txtUploadDate";
+            this.txtUploadDate.ReadOnly = true;
+            this.txtUploadDate.Width = 150;
+            // 
+            // txtUploadTime
+            // 
+            this.txtUploadTime.DataPropertyName = "UploadTime";
+            this.txtUploadTime.HeaderText = "UploadTime";
+            this.txtUploadTime.MinimumWidth = 8;
+            this.txtUploadTime.Name = "txtUploadTime";
+            this.txtUploadTime.ReadOnly = true;
+            this.txtUploadTime.Width = 150;
+            // 
+            // txtUploadedBy
+            // 
+            this.txtUploadedBy.DataPropertyName = "UploadedBy";
+            this.txtUploadedBy.HeaderText = "UploadedBy";
+            this.txtUploadedBy.MinimumWidth = 8;
+            this.txtUploadedBy.Name = "txtUploadedBy";
+            this.txtUploadedBy.ReadOnly = true;
+            this.txtUploadedBy.Width = 150;
+            // 
             // Form2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -2044,6 +2150,8 @@
         private System.Windows.Forms.ComboBox searchby_sourcebu_batchworkflow;
         private System.Windows.Forms.ComboBox approvedby;
         private System.Windows.Forms.Label label38;
+        private System.Windows.Forms.ComboBox smsoapprovedby;
+        private System.Windows.Forms.ComboBox adminlist;
         private System.Windows.Forms.DataGridViewTextBoxColumn txtRequestIDbatch;
         private System.Windows.Forms.DataGridViewTextBoxColumn txtBatchIDbatch;
         private System.Windows.Forms.DataGridViewTextBoxColumn txtInquiryIDbatch;
@@ -2097,7 +2205,5 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn txtUploadDate;
         private System.Windows.Forms.DataGridViewTextBoxColumn txtUploadTime;
         private System.Windows.Forms.DataGridViewTextBoxColumn txtUploadedBy;
-        private System.Windows.Forms.ComboBox smsoapprovedby;
-        private System.Windows.Forms.ComboBox adminlist;
     }
 }
