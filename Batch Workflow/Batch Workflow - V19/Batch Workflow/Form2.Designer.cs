@@ -30,6 +30,7 @@
         {
             this.button1 = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.completiondate_checkbox = new System.Windows.Forms.CheckBox();
             this.update_bulk = new System.Windows.Forms.Button();
             this.match_criteria_checkbox = new System.Windows.Forms.CheckBox();
             this.smsoapprovedby = new System.Windows.Forms.ComboBox();
@@ -202,7 +203,6 @@
             this.current_datetime = new System.Windows.Forms.DateTimePicker();
             this.inquirystatus_associatename = new System.Windows.Forms.ComboBox();
             this.adminlist = new System.Windows.Forms.ComboBox();
-            this.completiondate_checkbox = new System.Windows.Forms.CheckBox();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.noofhits)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.batchworkflow_datagridview)).BeginInit();
@@ -322,6 +322,17 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Batch Workflow";
             this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
+            // 
+            // completiondate_checkbox
+            // 
+            this.completiondate_checkbox.AutoSize = true;
+            this.completiondate_checkbox.Location = new System.Drawing.Point(1070, 451);
+            this.completiondate_checkbox.Name = "completiondate_checkbox";
+            this.completiondate_checkbox.Size = new System.Drawing.Size(261, 24);
+            this.completiondate_checkbox.TabIndex = 166;
+            this.completiondate_checkbox.Text = "Change for all the selected rows";
+            this.completiondate_checkbox.UseVisualStyleBackColor = true;
+            this.completiondate_checkbox.CheckedChanged += new System.EventHandler(this.completiondate_checkbox_CheckedChanged);
             // 
             // update_bulk
             // 
@@ -1979,17 +1990,6 @@
             this.adminlist.Name = "adminlist";
             this.adminlist.Size = new System.Drawing.Size(121, 28);
             this.adminlist.TabIndex = 147;
-            // 
-            // completiondate_checkbox
-            // 
-            this.completiondate_checkbox.AutoSize = true;
-            this.completiondate_checkbox.Location = new System.Drawing.Point(1066, 451);
-            this.completiondate_checkbox.Name = "completiondate_checkbox";
-            this.completiondate_checkbox.Size = new System.Drawing.Size(261, 24);
-            this.completiondate_checkbox.TabIndex = 166;
-            this.completiondate_checkbox.Text = "Change for all the selected rows";
-            this.completiondate_checkbox.UseVisualStyleBackColor = true;
-            this.completiondate_checkbox.CheckedChanged += new System.EventHandler(this.completiondate_checkbox_CheckedChanged);
             // 
             // Form2
             // 
