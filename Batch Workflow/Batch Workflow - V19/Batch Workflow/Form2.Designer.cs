@@ -328,9 +328,9 @@
             this.completiondate_checkbox.AutoSize = true;
             this.completiondate_checkbox.Location = new System.Drawing.Point(1070, 451);
             this.completiondate_checkbox.Name = "completiondate_checkbox";
-            this.completiondate_checkbox.Size = new System.Drawing.Size(261, 24);
+            this.completiondate_checkbox.Size = new System.Drawing.Size(258, 24);
             this.completiondate_checkbox.TabIndex = 166;
-            this.completiondate_checkbox.Text = "Change for all the selected rows";
+            this.completiondate_checkbox.Text = "Update for all the selected rows";
             this.completiondate_checkbox.UseVisualStyleBackColor = true;
             this.completiondate_checkbox.CheckedChanged += new System.EventHandler(this.completiondate_checkbox_CheckedChanged);
             // 
@@ -349,9 +349,9 @@
             this.match_criteria_checkbox.AutoSize = true;
             this.match_criteria_checkbox.Location = new System.Drawing.Point(340, 247);
             this.match_criteria_checkbox.Name = "match_criteria_checkbox";
-            this.match_criteria_checkbox.Size = new System.Drawing.Size(261, 24);
+            this.match_criteria_checkbox.Size = new System.Drawing.Size(258, 24);
             this.match_criteria_checkbox.TabIndex = 164;
-            this.match_criteria_checkbox.Text = "Change for all the selected rows";
+            this.match_criteria_checkbox.Text = "Update for all the selected rows";
             this.match_criteria_checkbox.UseVisualStyleBackColor = true;
             this.match_criteria_checkbox.CheckedChanged += new System.EventHandler(this.match_criteria_checkbox_CheckedChanged);
             // 
