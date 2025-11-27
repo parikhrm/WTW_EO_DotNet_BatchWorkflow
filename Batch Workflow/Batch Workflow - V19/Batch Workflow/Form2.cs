@@ -138,6 +138,7 @@ namespace Batch_Workflow
             checkBox1.Checked = false;
             checkBox2.Checked = false;
             checkBox2.Enabled = false;
+            update_bulk.Enabled = false;
             if (adminlist.Text == "Admin")
             {
                 approvalrejectioncomment.Enabled = true;
@@ -2978,6 +2979,10 @@ namespace Batch_Workflow
             {
                 MessageBox.Show("Please select the check box under Match Criteria to update the records in bulk");
             }
+            else if(completiondate_checkbox.Checked == false)
+            {
+                MessageBox.Show("Please select the check box under Completion Date to update the records in bulk");
+            }
             else if (string.IsNullOrEmpty(matchcriteria.Text))
             {
                 MessageBox.Show("Please update Match Criteria");
@@ -2989,6 +2994,14 @@ namespace Batch_Workflow
             else if (completiontime.Text.Trim() == string.Empty)
             {
                 MessageBox.Show("Please update Completion Time");
+            }
+            else if(receiveddate.Value.Date > completiondate.Value.Date)
+            {
+                MessageBox.Show("Received date cannot be more than Completion Date");
+            }
+            else if(completiondate.Value.Date > current_datetime.Value.Date)
+            {
+                MessageBox.Show("Completion Date cannot be more than Todays' date");
             }
             else
             {
@@ -3029,6 +3042,30 @@ namespace Batch_Workflow
                 {
                     MessageBox.Show("Error Generated Details: " + ab.ToString());
                 }
+            }
+        }
+
+        private void match_criteria_checkbox_CheckedChanged(object sender, EventArgs e)
+        {
+            if (completiondate_checkbox.Checked == true && match_criteria_checkbox.Checked == true)
+            {
+                update_bulk.Enabled = true;
+            }
+            else
+            {
+                update_bulk.Enabled = false;
+            }
+        }
+
+        private void completiondate_checkbox_CheckedChanged(object sender, EventArgs e)
+        {
+            if(completiondate_checkbox.Checked == true && match_criteria_checkbox.Checked == true)
+            { 
+                update_bulk.Enabled = true; 
+            }
+            else
+            {
+                update_bulk.Enabled = false;
             }
         }
     }

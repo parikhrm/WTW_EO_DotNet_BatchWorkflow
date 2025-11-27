@@ -30,6 +30,8 @@
         {
             this.button1 = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.update_bulk = new System.Windows.Forms.Button();
+            this.match_criteria_checkbox = new System.Windows.Forms.CheckBox();
             this.smsoapprovedby = new System.Windows.Forms.ComboBox();
             this.approvedby = new System.Windows.Forms.ComboBox();
             this.label38 = new System.Windows.Forms.Label();
@@ -119,33 +121,6 @@
             this.requestoremailaddress = new System.Windows.Forms.TextBox();
             this.label27 = new System.Windows.Forms.Label();
             this.batchworkflow_datagridview = new System.Windows.Forms.DataGridView();
-            this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.searchby_sourcebu_batchworkflow = new System.Windows.Forms.ComboBox();
-            this.label37 = new System.Windows.Forms.Label();
-            this.searchby_eventlist_batchworkflow = new System.Windows.Forms.TextBox();
-            this.label36 = new System.Windows.Forms.Label();
-            this.searchby_entityid_batchworkflow = new System.Windows.Forms.TextBox();
-            this.label34 = new System.Windows.Forms.Label();
-            this.searchby_associatename_batchworkflow = new System.Windows.Forms.ComboBox();
-            this.label33 = new System.Windows.Forms.Label();
-            this.label32 = new System.Windows.Forms.Label();
-            this.searchby_riskid_batchworkflow = new System.Windows.Forms.TextBox();
-            this.searchby_inquirystatus_batchworkflow = new System.Windows.Forms.ComboBox();
-            this.label26 = new System.Windows.Forms.Label();
-            this.searchby_pagenumber_batchworkflow = new System.Windows.Forms.NumericUpDown();
-            this.label24 = new System.Windows.Forms.Label();
-            this.searchby_partyname_batchworkflow = new System.Windows.Forms.TextBox();
-            this.searchby_trackingid_batchworkflow = new System.Windows.Forms.TextBox();
-            this.searchby_batchid_batchworkflow = new System.Windows.Forms.TextBox();
-            this.label31 = new System.Windows.Forms.Label();
-            this.label30 = new System.Windows.Forms.Label();
-            this.label29 = new System.Windows.Forms.Label();
-            this.concat_batchid_riskid = new System.Windows.Forms.ComboBox();
-            this.associateloginid_allocation = new System.Windows.Forms.TextBox();
-            this.pagenumber = new System.Windows.Forms.NumericUpDown();
-            this.current_datetime = new System.Windows.Forms.DateTimePicker();
-            this.inquirystatus_associatename = new System.Windows.Forms.ComboBox();
-            this.adminlist = new System.Windows.Forms.ComboBox();
             this.txt_CheckValue = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.txtRequestIDbatch = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.txtBatchIDbatch = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -200,8 +175,34 @@
             this.txtUploadDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.txtUploadTime = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.txtUploadedBy = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.match_criteria_checkbox = new System.Windows.Forms.CheckBox();
-            this.update_bulk = new System.Windows.Forms.Button();
+            this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.searchby_sourcebu_batchworkflow = new System.Windows.Forms.ComboBox();
+            this.label37 = new System.Windows.Forms.Label();
+            this.searchby_eventlist_batchworkflow = new System.Windows.Forms.TextBox();
+            this.label36 = new System.Windows.Forms.Label();
+            this.searchby_entityid_batchworkflow = new System.Windows.Forms.TextBox();
+            this.label34 = new System.Windows.Forms.Label();
+            this.searchby_associatename_batchworkflow = new System.Windows.Forms.ComboBox();
+            this.label33 = new System.Windows.Forms.Label();
+            this.label32 = new System.Windows.Forms.Label();
+            this.searchby_riskid_batchworkflow = new System.Windows.Forms.TextBox();
+            this.searchby_inquirystatus_batchworkflow = new System.Windows.Forms.ComboBox();
+            this.label26 = new System.Windows.Forms.Label();
+            this.searchby_pagenumber_batchworkflow = new System.Windows.Forms.NumericUpDown();
+            this.label24 = new System.Windows.Forms.Label();
+            this.searchby_partyname_batchworkflow = new System.Windows.Forms.TextBox();
+            this.searchby_trackingid_batchworkflow = new System.Windows.Forms.TextBox();
+            this.searchby_batchid_batchworkflow = new System.Windows.Forms.TextBox();
+            this.label31 = new System.Windows.Forms.Label();
+            this.label30 = new System.Windows.Forms.Label();
+            this.label29 = new System.Windows.Forms.Label();
+            this.concat_batchid_riskid = new System.Windows.Forms.ComboBox();
+            this.associateloginid_allocation = new System.Windows.Forms.TextBox();
+            this.pagenumber = new System.Windows.Forms.NumericUpDown();
+            this.current_datetime = new System.Windows.Forms.DateTimePicker();
+            this.inquirystatus_associatename = new System.Windows.Forms.ComboBox();
+            this.adminlist = new System.Windows.Forms.ComboBox();
+            this.completiondate_checkbox = new System.Windows.Forms.CheckBox();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.noofhits)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.batchworkflow_datagridview)).BeginInit();
@@ -225,6 +226,7 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.completiondate_checkbox);
             this.groupBox1.Controls.Add(this.update_bulk);
             this.groupBox1.Controls.Add(this.match_criteria_checkbox);
             this.groupBox1.Controls.Add(this.smsoapprovedby);
@@ -321,6 +323,27 @@
             this.groupBox1.Text = "Batch Workflow";
             this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
             // 
+            // update_bulk
+            // 
+            this.update_bulk.Location = new System.Drawing.Point(929, 497);
+            this.update_bulk.Name = "update_bulk";
+            this.update_bulk.Size = new System.Drawing.Size(124, 47);
+            this.update_bulk.TabIndex = 165;
+            this.update_bulk.Text = "Update Bulk";
+            this.update_bulk.UseVisualStyleBackColor = true;
+            this.update_bulk.Click += new System.EventHandler(this.update_bulk_Click);
+            // 
+            // match_criteria_checkbox
+            // 
+            this.match_criteria_checkbox.AutoSize = true;
+            this.match_criteria_checkbox.Location = new System.Drawing.Point(340, 247);
+            this.match_criteria_checkbox.Name = "match_criteria_checkbox";
+            this.match_criteria_checkbox.Size = new System.Drawing.Size(261, 24);
+            this.match_criteria_checkbox.TabIndex = 164;
+            this.match_criteria_checkbox.Text = "Change for all the selected rows";
+            this.match_criteria_checkbox.UseVisualStyleBackColor = true;
+            this.match_criteria_checkbox.CheckedChanged += new System.EventHandler(this.match_criteria_checkbox_CheckedChanged);
+            // 
             // smsoapprovedby
             // 
             this.smsoapprovedby.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
@@ -364,7 +387,7 @@
             // checkBox1
             // 
             this.checkBox1.AutoSize = true;
-            this.checkBox1.Location = new System.Drawing.Point(1034, 466);
+            this.checkBox1.Location = new System.Drawing.Point(1056, 491);
             this.checkBox1.Name = "checkBox1";
             this.checkBox1.Size = new System.Drawing.Size(290, 24);
             this.checkBox1.TabIndex = 159;
@@ -402,7 +425,7 @@
             // 
             this.uploadtime.CustomFormat = " ";
             this.uploadtime.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.uploadtime.Location = new System.Drawing.Point(1333, 465);
+            this.uploadtime.Location = new System.Drawing.Point(1066, 527);
             this.uploadtime.Name = "uploadtime";
             this.uploadtime.ShowUpDown = true;
             this.uploadtime.Size = new System.Drawing.Size(97, 26);
@@ -414,7 +437,7 @@
             // 
             this.project_lastupdatedtime.CustomFormat = " ";
             this.project_lastupdatedtime.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.project_lastupdatedtime.Location = new System.Drawing.Point(1224, 493);
+            this.project_lastupdatedtime.Location = new System.Drawing.Point(309, 497);
             this.project_lastupdatedtime.Name = "project_lastupdatedtime";
             this.project_lastupdatedtime.ShowUpDown = true;
             this.project_lastupdatedtime.Size = new System.Drawing.Size(104, 26);
@@ -438,7 +461,7 @@
             // 
             this.uploaddate.CustomFormat = " ";
             this.uploaddate.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.uploaddate.Location = new System.Drawing.Point(1333, 491);
+            this.uploaddate.Location = new System.Drawing.Point(1360, 493);
             this.uploaddate.Name = "uploaddate";
             this.uploaddate.Size = new System.Drawing.Size(83, 26);
             this.uploaddate.TabIndex = 154;
@@ -456,7 +479,7 @@
             // 
             this.project_lastupdateddate.CustomFormat = " ";
             this.project_lastupdateddate.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.project_lastupdateddate.Location = new System.Drawing.Point(1224, 518);
+            this.project_lastupdateddate.Location = new System.Drawing.Point(1218, 527);
             this.project_lastupdateddate.Name = "project_lastupdateddate";
             this.project_lastupdateddate.Size = new System.Drawing.Size(94, 26);
             this.project_lastupdateddate.TabIndex = 152;
@@ -486,7 +509,7 @@
             // 
             // project_lastupdatedby
             // 
-            this.project_lastupdatedby.Location = new System.Drawing.Point(1118, 493);
+            this.project_lastupdatedby.Location = new System.Drawing.Point(309, 527);
             this.project_lastupdatedby.Name = "project_lastupdatedby";
             this.project_lastupdatedby.Size = new System.Drawing.Size(100, 26);
             this.project_lastupdatedby.TabIndex = 151;
@@ -1256,276 +1279,6 @@
             this.batchworkflow_datagridview.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.batchworkflow_datagridview_CellContentClick);
             this.batchworkflow_datagridview.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.batchworkflow_datagridview_CellFormatting);
             // 
-            // groupBox3
-            // 
-            this.groupBox3.Controls.Add(this.searchby_sourcebu_batchworkflow);
-            this.groupBox3.Controls.Add(this.label37);
-            this.groupBox3.Controls.Add(this.searchby_eventlist_batchworkflow);
-            this.groupBox3.Controls.Add(this.label36);
-            this.groupBox3.Controls.Add(this.searchby_entityid_batchworkflow);
-            this.groupBox3.Controls.Add(this.label34);
-            this.groupBox3.Controls.Add(this.searchby_associatename_batchworkflow);
-            this.groupBox3.Controls.Add(this.label33);
-            this.groupBox3.Controls.Add(this.label32);
-            this.groupBox3.Controls.Add(this.searchby_riskid_batchworkflow);
-            this.groupBox3.Controls.Add(this.searchby_inquirystatus_batchworkflow);
-            this.groupBox3.Controls.Add(this.label26);
-            this.groupBox3.Controls.Add(this.searchby_pagenumber_batchworkflow);
-            this.groupBox3.Controls.Add(this.label24);
-            this.groupBox3.Controls.Add(this.searchby_partyname_batchworkflow);
-            this.groupBox3.Controls.Add(this.searchby_trackingid_batchworkflow);
-            this.groupBox3.Controls.Add(this.searchby_batchid_batchworkflow);
-            this.groupBox3.Controls.Add(this.label31);
-            this.groupBox3.Controls.Add(this.label30);
-            this.groupBox3.Controls.Add(this.label29);
-            this.groupBox3.Controls.Add(this.batchworkflow_datagridview);
-            this.groupBox3.Location = new System.Drawing.Point(12, 613);
-            this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(1883, 425);
-            this.groupBox3.TabIndex = 140;
-            this.groupBox3.TabStop = false;
-            this.groupBox3.Text = "Batch Workflow";
-            this.groupBox3.Enter += new System.EventHandler(this.groupBox3_Enter);
-            // 
-            // searchby_sourcebu_batchworkflow
-            // 
-            this.searchby_sourcebu_batchworkflow.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
-            this.searchby_sourcebu_batchworkflow.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
-            this.searchby_sourcebu_batchworkflow.FormattingEnabled = true;
-            this.searchby_sourcebu_batchworkflow.Location = new System.Drawing.Point(8, 28);
-            this.searchby_sourcebu_batchworkflow.Name = "searchby_sourcebu_batchworkflow";
-            this.searchby_sourcebu_batchworkflow.Size = new System.Drawing.Size(225, 28);
-            this.searchby_sourcebu_batchworkflow.TabIndex = 155;
-            this.searchby_sourcebu_batchworkflow.SelectedIndexChanged += new System.EventHandler(this.searchby_sourcebu_batchworkflow_SelectedIndexChanged);
-            // 
-            // label37
-            // 
-            this.label37.AutoSize = true;
-            this.label37.Location = new System.Drawing.Point(1696, 62);
-            this.label37.Name = "label37";
-            this.label37.Size = new System.Drawing.Size(154, 20);
-            this.label37.TabIndex = 154;
-            this.label37.Text = "Search by Event List";
-            // 
-            // searchby_eventlist_batchworkflow
-            // 
-            this.searchby_eventlist_batchworkflow.Location = new System.Drawing.Point(1687, 29);
-            this.searchby_eventlist_batchworkflow.Name = "searchby_eventlist_batchworkflow";
-            this.searchby_eventlist_batchworkflow.Size = new System.Drawing.Size(178, 26);
-            this.searchby_eventlist_batchworkflow.TabIndex = 153;
-            this.searchby_eventlist_batchworkflow.TextChanged += new System.EventHandler(this.searchby_eventlist_batchworkflow_TextChanged);
-            // 
-            // label36
-            // 
-            this.label36.AutoSize = true;
-            this.label36.Location = new System.Drawing.Point(1127, 65);
-            this.label36.Name = "label36";
-            this.label36.Size = new System.Drawing.Size(141, 20);
-            this.label36.TabIndex = 152;
-            this.label36.Text = "Search by EntityID";
-            // 
-            // searchby_entityid_batchworkflow
-            // 
-            this.searchby_entityid_batchworkflow.Location = new System.Drawing.Point(1109, 30);
-            this.searchby_entityid_batchworkflow.Name = "searchby_entityid_batchworkflow";
-            this.searchby_entityid_batchworkflow.Size = new System.Drawing.Size(187, 26);
-            this.searchby_entityid_batchworkflow.TabIndex = 151;
-            this.searchby_entityid_batchworkflow.TextChanged += new System.EventHandler(this.searchby_entityid_batchworkflow_TextChanged);
-            // 
-            // label34
-            // 
-            this.label34.AutoSize = true;
-            this.label34.Location = new System.Drawing.Point(20, 65);
-            this.label34.Name = "label34";
-            this.label34.Size = new System.Drawing.Size(162, 20);
-            this.label34.TabIndex = 149;
-            this.label34.Text = "Search by Source BU";
-            // 
-            // searchby_associatename_batchworkflow
-            // 
-            this.searchby_associatename_batchworkflow.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.searchby_associatename_batchworkflow.FormattingEnabled = true;
-            this.searchby_associatename_batchworkflow.Location = new System.Drawing.Point(1483, 28);
-            this.searchby_associatename_batchworkflow.Name = "searchby_associatename_batchworkflow";
-            this.searchby_associatename_batchworkflow.Size = new System.Drawing.Size(198, 28);
-            this.searchby_associatename_batchworkflow.TabIndex = 148;
-            this.searchby_associatename_batchworkflow.SelectedIndexChanged += new System.EventHandler(this.searchby_associatename_batchworkflow_SelectedIndexChanged);
-            this.searchby_associatename_batchworkflow.SelectionChangeCommitted += new System.EventHandler(this.searchby_associatename_batchworkflow_SelectionChangeCommitted);
-            this.searchby_associatename_batchworkflow.TextUpdate += new System.EventHandler(this.searchby_associatename_batchworkflow_TextUpdate);
-            this.searchby_associatename_batchworkflow.KeyDown += new System.Windows.Forms.KeyEventHandler(this.searchby_associatename_batchworkflow_KeyDown);
-            // 
-            // label33
-            // 
-            this.label33.AutoSize = true;
-            this.label33.Location = new System.Drawing.Point(1483, 62);
-            this.label33.Name = "label33";
-            this.label33.Size = new System.Drawing.Size(200, 20);
-            this.label33.TabIndex = 147;
-            this.label33.Text = "Search by Associate Name";
-            // 
-            // label32
-            // 
-            this.label32.AutoSize = true;
-            this.label32.Location = new System.Drawing.Point(592, 62);
-            this.label32.Name = "label32";
-            this.label32.Size = new System.Drawing.Size(136, 20);
-            this.label32.TabIndex = 146;
-            this.label32.Text = "Search by Risk ID";
-            // 
-            // searchby_riskid_batchworkflow
-            // 
-            this.searchby_riskid_batchworkflow.Location = new System.Drawing.Point(573, 29);
-            this.searchby_riskid_batchworkflow.Name = "searchby_riskid_batchworkflow";
-            this.searchby_riskid_batchworkflow.Size = new System.Drawing.Size(186, 26);
-            this.searchby_riskid_batchworkflow.TabIndex = 3;
-            this.searchby_riskid_batchworkflow.TextChanged += new System.EventHandler(this.searchby_riskid_batchworkflow_TextChanged);
-            // 
-            // searchby_inquirystatus_batchworkflow
-            // 
-            this.searchby_inquirystatus_batchworkflow.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.searchby_inquirystatus_batchworkflow.FormattingEnabled = true;
-            this.searchby_inquirystatus_batchworkflow.Location = new System.Drawing.Point(1301, 29);
-            this.searchby_inquirystatus_batchworkflow.Name = "searchby_inquirystatus_batchworkflow";
-            this.searchby_inquirystatus_batchworkflow.Size = new System.Drawing.Size(176, 28);
-            this.searchby_inquirystatus_batchworkflow.TabIndex = 6;
-            this.searchby_inquirystatus_batchworkflow.SelectedIndexChanged += new System.EventHandler(this.searchby_inquirystatus_batchworkflow_SelectedIndexChanged);
-            this.searchby_inquirystatus_batchworkflow.KeyDown += new System.Windows.Forms.KeyEventHandler(this.searchby_inquirystatus_batchworkflow_KeyDown);
-            // 
-            // label26
-            // 
-            this.label26.AutoSize = true;
-            this.label26.Location = new System.Drawing.Point(1297, 62);
-            this.label26.Name = "label26";
-            this.label26.Size = new System.Drawing.Size(182, 20);
-            this.label26.TabIndex = 142;
-            this.label26.Text = "Search by Inquiry Status";
-            // 
-            // searchby_pagenumber_batchworkflow
-            // 
-            this.searchby_pagenumber_batchworkflow.Location = new System.Drawing.Point(1019, 30);
-            this.searchby_pagenumber_batchworkflow.Maximum = new decimal(new int[] {
-            999,
-            0,
-            0,
-            0});
-            this.searchby_pagenumber_batchworkflow.Name = "searchby_pagenumber_batchworkflow";
-            this.searchby_pagenumber_batchworkflow.Size = new System.Drawing.Size(85, 26);
-            this.searchby_pagenumber_batchworkflow.TabIndex = 5;
-            this.searchby_pagenumber_batchworkflow.ValueChanged += new System.EventHandler(this.searchby_pagenumber_batchworkflow_ValueChanged);
-            // 
-            // label24
-            // 
-            this.label24.AutoSize = true;
-            this.label24.Location = new System.Drawing.Point(952, 64);
-            this.label24.Name = "label24";
-            this.label24.Size = new System.Drawing.Size(181, 20);
-            this.label24.TabIndex = 141;
-            this.label24.Text = "Search by Page Number";
-            // 
-            // searchby_partyname_batchworkflow
-            // 
-            this.searchby_partyname_batchworkflow.Location = new System.Drawing.Point(762, 29);
-            this.searchby_partyname_batchworkflow.Name = "searchby_partyname_batchworkflow";
-            this.searchby_partyname_batchworkflow.Size = new System.Drawing.Size(252, 26);
-            this.searchby_partyname_batchworkflow.TabIndex = 4;
-            this.searchby_partyname_batchworkflow.TextChanged += new System.EventHandler(this.searchby_partyname_batchworkflow_TextChanged);
-            // 
-            // searchby_trackingid_batchworkflow
-            // 
-            this.searchby_trackingid_batchworkflow.Location = new System.Drawing.Point(396, 29);
-            this.searchby_trackingid_batchworkflow.Name = "searchby_trackingid_batchworkflow";
-            this.searchby_trackingid_batchworkflow.Size = new System.Drawing.Size(171, 26);
-            this.searchby_trackingid_batchworkflow.TabIndex = 2;
-            this.searchby_trackingid_batchworkflow.TextChanged += new System.EventHandler(this.searchby_inquiryid_batchworkflow_TextChanged);
-            // 
-            // searchby_batchid_batchworkflow
-            // 
-            this.searchby_batchid_batchworkflow.Location = new System.Drawing.Point(239, 29);
-            this.searchby_batchid_batchworkflow.Name = "searchby_batchid_batchworkflow";
-            this.searchby_batchid_batchworkflow.Size = new System.Drawing.Size(151, 26);
-            this.searchby_batchid_batchworkflow.TabIndex = 1;
-            this.searchby_batchid_batchworkflow.TextChanged += new System.EventHandler(this.searchby_batchid_batchworkflow_TextChanged);
-            // 
-            // label31
-            // 
-            this.label31.AutoSize = true;
-            this.label31.Location = new System.Drawing.Point(771, 62);
-            this.label31.Name = "label31";
-            this.label31.Size = new System.Drawing.Size(166, 20);
-            this.label31.TabIndex = 137;
-            this.label31.Text = "Search by Party Name";
-            // 
-            // label30
-            // 
-            this.label30.AutoSize = true;
-            this.label30.Location = new System.Drawing.Point(396, 64);
-            this.label30.Name = "label30";
-            this.label30.Size = new System.Drawing.Size(165, 20);
-            this.label30.TabIndex = 136;
-            this.label30.Text = "Search by Tracking ID";
-            // 
-            // label29
-            // 
-            this.label29.AutoSize = true;
-            this.label29.Location = new System.Drawing.Point(243, 65);
-            this.label29.Name = "label29";
-            this.label29.Size = new System.Drawing.Size(147, 20);
-            this.label29.TabIndex = 135;
-            this.label29.Text = "Search by Batch ID";
-            // 
-            // concat_batchid_riskid
-            // 
-            this.concat_batchid_riskid.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.concat_batchid_riskid.FormattingEnabled = true;
-            this.concat_batchid_riskid.Location = new System.Drawing.Point(371, 3);
-            this.concat_batchid_riskid.Name = "concat_batchid_riskid";
-            this.concat_batchid_riskid.Size = new System.Drawing.Size(121, 28);
-            this.concat_batchid_riskid.TabIndex = 141;
-            // 
-            // associateloginid_allocation
-            // 
-            this.associateloginid_allocation.Location = new System.Drawing.Point(498, 3);
-            this.associateloginid_allocation.Name = "associateloginid_allocation";
-            this.associateloginid_allocation.Size = new System.Drawing.Size(190, 26);
-            this.associateloginid_allocation.TabIndex = 143;
-            // 
-            // pagenumber
-            // 
-            this.pagenumber.Location = new System.Drawing.Point(694, 4);
-            this.pagenumber.Maximum = new decimal(new int[] {
-            999,
-            0,
-            0,
-            0});
-            this.pagenumber.Name = "pagenumber";
-            this.pagenumber.Size = new System.Drawing.Size(93, 26);
-            this.pagenumber.TabIndex = 144;
-            // 
-            // current_datetime
-            // 
-            this.current_datetime.Location = new System.Drawing.Point(161, 5);
-            this.current_datetime.Name = "current_datetime";
-            this.current_datetime.Size = new System.Drawing.Size(200, 26);
-            this.current_datetime.TabIndex = 145;
-            // 
-            // inquirystatus_associatename
-            // 
-            this.inquirystatus_associatename.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.inquirystatus_associatename.FormattingEnabled = true;
-            this.inquirystatus_associatename.Location = new System.Drawing.Point(806, 4);
-            this.inquirystatus_associatename.Name = "inquirystatus_associatename";
-            this.inquirystatus_associatename.Size = new System.Drawing.Size(121, 28);
-            this.inquirystatus_associatename.TabIndex = 146;
-            // 
-            // adminlist
-            // 
-            this.adminlist.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.adminlist.FormattingEnabled = true;
-            this.adminlist.Location = new System.Drawing.Point(940, 4);
-            this.adminlist.Name = "adminlist";
-            this.adminlist.Size = new System.Drawing.Size(121, 28);
-            this.adminlist.TabIndex = 147;
-            // 
             // txt_CheckValue
             // 
             this.txt_CheckValue.HeaderText = "CheckValue";
@@ -1957,25 +1710,286 @@
             this.txtUploadedBy.Name = "txtUploadedBy";
             this.txtUploadedBy.Width = 150;
             // 
-            // match_criteria_checkbox
+            // groupBox3
             // 
-            this.match_criteria_checkbox.AutoSize = true;
-            this.match_criteria_checkbox.Location = new System.Drawing.Point(340, 247);
-            this.match_criteria_checkbox.Name = "match_criteria_checkbox";
-            this.match_criteria_checkbox.Size = new System.Drawing.Size(261, 24);
-            this.match_criteria_checkbox.TabIndex = 164;
-            this.match_criteria_checkbox.Text = "Change for all the selected rows";
-            this.match_criteria_checkbox.UseVisualStyleBackColor = true;
+            this.groupBox3.Controls.Add(this.searchby_sourcebu_batchworkflow);
+            this.groupBox3.Controls.Add(this.label37);
+            this.groupBox3.Controls.Add(this.searchby_eventlist_batchworkflow);
+            this.groupBox3.Controls.Add(this.label36);
+            this.groupBox3.Controls.Add(this.searchby_entityid_batchworkflow);
+            this.groupBox3.Controls.Add(this.label34);
+            this.groupBox3.Controls.Add(this.searchby_associatename_batchworkflow);
+            this.groupBox3.Controls.Add(this.label33);
+            this.groupBox3.Controls.Add(this.label32);
+            this.groupBox3.Controls.Add(this.searchby_riskid_batchworkflow);
+            this.groupBox3.Controls.Add(this.searchby_inquirystatus_batchworkflow);
+            this.groupBox3.Controls.Add(this.label26);
+            this.groupBox3.Controls.Add(this.searchby_pagenumber_batchworkflow);
+            this.groupBox3.Controls.Add(this.label24);
+            this.groupBox3.Controls.Add(this.searchby_partyname_batchworkflow);
+            this.groupBox3.Controls.Add(this.searchby_trackingid_batchworkflow);
+            this.groupBox3.Controls.Add(this.searchby_batchid_batchworkflow);
+            this.groupBox3.Controls.Add(this.label31);
+            this.groupBox3.Controls.Add(this.label30);
+            this.groupBox3.Controls.Add(this.label29);
+            this.groupBox3.Controls.Add(this.batchworkflow_datagridview);
+            this.groupBox3.Location = new System.Drawing.Point(12, 613);
+            this.groupBox3.Name = "groupBox3";
+            this.groupBox3.Size = new System.Drawing.Size(1883, 425);
+            this.groupBox3.TabIndex = 140;
+            this.groupBox3.TabStop = false;
+            this.groupBox3.Text = "Batch Workflow";
+            this.groupBox3.Enter += new System.EventHandler(this.groupBox3_Enter);
             // 
-            // update_bulk
+            // searchby_sourcebu_batchworkflow
             // 
-            this.update_bulk.Location = new System.Drawing.Point(929, 497);
-            this.update_bulk.Name = "update_bulk";
-            this.update_bulk.Size = new System.Drawing.Size(124, 47);
-            this.update_bulk.TabIndex = 165;
-            this.update_bulk.Text = "Update Bulk";
-            this.update_bulk.UseVisualStyleBackColor = true;
-            this.update_bulk.Click += new System.EventHandler(this.update_bulk_Click);
+            this.searchby_sourcebu_batchworkflow.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.searchby_sourcebu_batchworkflow.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.searchby_sourcebu_batchworkflow.FormattingEnabled = true;
+            this.searchby_sourcebu_batchworkflow.Location = new System.Drawing.Point(8, 28);
+            this.searchby_sourcebu_batchworkflow.Name = "searchby_sourcebu_batchworkflow";
+            this.searchby_sourcebu_batchworkflow.Size = new System.Drawing.Size(225, 28);
+            this.searchby_sourcebu_batchworkflow.TabIndex = 155;
+            this.searchby_sourcebu_batchworkflow.SelectedIndexChanged += new System.EventHandler(this.searchby_sourcebu_batchworkflow_SelectedIndexChanged);
+            // 
+            // label37
+            // 
+            this.label37.AutoSize = true;
+            this.label37.Location = new System.Drawing.Point(1696, 62);
+            this.label37.Name = "label37";
+            this.label37.Size = new System.Drawing.Size(154, 20);
+            this.label37.TabIndex = 154;
+            this.label37.Text = "Search by Event List";
+            // 
+            // searchby_eventlist_batchworkflow
+            // 
+            this.searchby_eventlist_batchworkflow.Location = new System.Drawing.Point(1687, 29);
+            this.searchby_eventlist_batchworkflow.Name = "searchby_eventlist_batchworkflow";
+            this.searchby_eventlist_batchworkflow.Size = new System.Drawing.Size(178, 26);
+            this.searchby_eventlist_batchworkflow.TabIndex = 153;
+            this.searchby_eventlist_batchworkflow.TextChanged += new System.EventHandler(this.searchby_eventlist_batchworkflow_TextChanged);
+            // 
+            // label36
+            // 
+            this.label36.AutoSize = true;
+            this.label36.Location = new System.Drawing.Point(1127, 65);
+            this.label36.Name = "label36";
+            this.label36.Size = new System.Drawing.Size(141, 20);
+            this.label36.TabIndex = 152;
+            this.label36.Text = "Search by EntityID";
+            // 
+            // searchby_entityid_batchworkflow
+            // 
+            this.searchby_entityid_batchworkflow.Location = new System.Drawing.Point(1109, 30);
+            this.searchby_entityid_batchworkflow.Name = "searchby_entityid_batchworkflow";
+            this.searchby_entityid_batchworkflow.Size = new System.Drawing.Size(187, 26);
+            this.searchby_entityid_batchworkflow.TabIndex = 151;
+            this.searchby_entityid_batchworkflow.TextChanged += new System.EventHandler(this.searchby_entityid_batchworkflow_TextChanged);
+            // 
+            // label34
+            // 
+            this.label34.AutoSize = true;
+            this.label34.Location = new System.Drawing.Point(20, 65);
+            this.label34.Name = "label34";
+            this.label34.Size = new System.Drawing.Size(162, 20);
+            this.label34.TabIndex = 149;
+            this.label34.Text = "Search by Source BU";
+            // 
+            // searchby_associatename_batchworkflow
+            // 
+            this.searchby_associatename_batchworkflow.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.searchby_associatename_batchworkflow.FormattingEnabled = true;
+            this.searchby_associatename_batchworkflow.Location = new System.Drawing.Point(1483, 28);
+            this.searchby_associatename_batchworkflow.Name = "searchby_associatename_batchworkflow";
+            this.searchby_associatename_batchworkflow.Size = new System.Drawing.Size(198, 28);
+            this.searchby_associatename_batchworkflow.TabIndex = 148;
+            this.searchby_associatename_batchworkflow.SelectedIndexChanged += new System.EventHandler(this.searchby_associatename_batchworkflow_SelectedIndexChanged);
+            this.searchby_associatename_batchworkflow.SelectionChangeCommitted += new System.EventHandler(this.searchby_associatename_batchworkflow_SelectionChangeCommitted);
+            this.searchby_associatename_batchworkflow.TextUpdate += new System.EventHandler(this.searchby_associatename_batchworkflow_TextUpdate);
+            this.searchby_associatename_batchworkflow.KeyDown += new System.Windows.Forms.KeyEventHandler(this.searchby_associatename_batchworkflow_KeyDown);
+            // 
+            // label33
+            // 
+            this.label33.AutoSize = true;
+            this.label33.Location = new System.Drawing.Point(1483, 62);
+            this.label33.Name = "label33";
+            this.label33.Size = new System.Drawing.Size(200, 20);
+            this.label33.TabIndex = 147;
+            this.label33.Text = "Search by Associate Name";
+            // 
+            // label32
+            // 
+            this.label32.AutoSize = true;
+            this.label32.Location = new System.Drawing.Point(592, 62);
+            this.label32.Name = "label32";
+            this.label32.Size = new System.Drawing.Size(136, 20);
+            this.label32.TabIndex = 146;
+            this.label32.Text = "Search by Risk ID";
+            // 
+            // searchby_riskid_batchworkflow
+            // 
+            this.searchby_riskid_batchworkflow.Location = new System.Drawing.Point(573, 29);
+            this.searchby_riskid_batchworkflow.Name = "searchby_riskid_batchworkflow";
+            this.searchby_riskid_batchworkflow.Size = new System.Drawing.Size(186, 26);
+            this.searchby_riskid_batchworkflow.TabIndex = 3;
+            this.searchby_riskid_batchworkflow.TextChanged += new System.EventHandler(this.searchby_riskid_batchworkflow_TextChanged);
+            // 
+            // searchby_inquirystatus_batchworkflow
+            // 
+            this.searchby_inquirystatus_batchworkflow.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.searchby_inquirystatus_batchworkflow.FormattingEnabled = true;
+            this.searchby_inquirystatus_batchworkflow.Location = new System.Drawing.Point(1301, 29);
+            this.searchby_inquirystatus_batchworkflow.Name = "searchby_inquirystatus_batchworkflow";
+            this.searchby_inquirystatus_batchworkflow.Size = new System.Drawing.Size(176, 28);
+            this.searchby_inquirystatus_batchworkflow.TabIndex = 6;
+            this.searchby_inquirystatus_batchworkflow.SelectedIndexChanged += new System.EventHandler(this.searchby_inquirystatus_batchworkflow_SelectedIndexChanged);
+            this.searchby_inquirystatus_batchworkflow.KeyDown += new System.Windows.Forms.KeyEventHandler(this.searchby_inquirystatus_batchworkflow_KeyDown);
+            // 
+            // label26
+            // 
+            this.label26.AutoSize = true;
+            this.label26.Location = new System.Drawing.Point(1297, 62);
+            this.label26.Name = "label26";
+            this.label26.Size = new System.Drawing.Size(182, 20);
+            this.label26.TabIndex = 142;
+            this.label26.Text = "Search by Inquiry Status";
+            // 
+            // searchby_pagenumber_batchworkflow
+            // 
+            this.searchby_pagenumber_batchworkflow.Location = new System.Drawing.Point(1019, 30);
+            this.searchby_pagenumber_batchworkflow.Maximum = new decimal(new int[] {
+            999,
+            0,
+            0,
+            0});
+            this.searchby_pagenumber_batchworkflow.Name = "searchby_pagenumber_batchworkflow";
+            this.searchby_pagenumber_batchworkflow.Size = new System.Drawing.Size(85, 26);
+            this.searchby_pagenumber_batchworkflow.TabIndex = 5;
+            this.searchby_pagenumber_batchworkflow.ValueChanged += new System.EventHandler(this.searchby_pagenumber_batchworkflow_ValueChanged);
+            // 
+            // label24
+            // 
+            this.label24.AutoSize = true;
+            this.label24.Location = new System.Drawing.Point(952, 64);
+            this.label24.Name = "label24";
+            this.label24.Size = new System.Drawing.Size(181, 20);
+            this.label24.TabIndex = 141;
+            this.label24.Text = "Search by Page Number";
+            // 
+            // searchby_partyname_batchworkflow
+            // 
+            this.searchby_partyname_batchworkflow.Location = new System.Drawing.Point(762, 29);
+            this.searchby_partyname_batchworkflow.Name = "searchby_partyname_batchworkflow";
+            this.searchby_partyname_batchworkflow.Size = new System.Drawing.Size(252, 26);
+            this.searchby_partyname_batchworkflow.TabIndex = 4;
+            this.searchby_partyname_batchworkflow.TextChanged += new System.EventHandler(this.searchby_partyname_batchworkflow_TextChanged);
+            // 
+            // searchby_trackingid_batchworkflow
+            // 
+            this.searchby_trackingid_batchworkflow.Location = new System.Drawing.Point(396, 29);
+            this.searchby_trackingid_batchworkflow.Name = "searchby_trackingid_batchworkflow";
+            this.searchby_trackingid_batchworkflow.Size = new System.Drawing.Size(171, 26);
+            this.searchby_trackingid_batchworkflow.TabIndex = 2;
+            this.searchby_trackingid_batchworkflow.TextChanged += new System.EventHandler(this.searchby_inquiryid_batchworkflow_TextChanged);
+            // 
+            // searchby_batchid_batchworkflow
+            // 
+            this.searchby_batchid_batchworkflow.Location = new System.Drawing.Point(239, 29);
+            this.searchby_batchid_batchworkflow.Name = "searchby_batchid_batchworkflow";
+            this.searchby_batchid_batchworkflow.Size = new System.Drawing.Size(151, 26);
+            this.searchby_batchid_batchworkflow.TabIndex = 1;
+            this.searchby_batchid_batchworkflow.TextChanged += new System.EventHandler(this.searchby_batchid_batchworkflow_TextChanged);
+            // 
+            // label31
+            // 
+            this.label31.AutoSize = true;
+            this.label31.Location = new System.Drawing.Point(771, 62);
+            this.label31.Name = "label31";
+            this.label31.Size = new System.Drawing.Size(166, 20);
+            this.label31.TabIndex = 137;
+            this.label31.Text = "Search by Party Name";
+            // 
+            // label30
+            // 
+            this.label30.AutoSize = true;
+            this.label30.Location = new System.Drawing.Point(396, 64);
+            this.label30.Name = "label30";
+            this.label30.Size = new System.Drawing.Size(165, 20);
+            this.label30.TabIndex = 136;
+            this.label30.Text = "Search by Tracking ID";
+            // 
+            // label29
+            // 
+            this.label29.AutoSize = true;
+            this.label29.Location = new System.Drawing.Point(243, 65);
+            this.label29.Name = "label29";
+            this.label29.Size = new System.Drawing.Size(147, 20);
+            this.label29.TabIndex = 135;
+            this.label29.Text = "Search by Batch ID";
+            // 
+            // concat_batchid_riskid
+            // 
+            this.concat_batchid_riskid.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.concat_batchid_riskid.FormattingEnabled = true;
+            this.concat_batchid_riskid.Location = new System.Drawing.Point(371, 3);
+            this.concat_batchid_riskid.Name = "concat_batchid_riskid";
+            this.concat_batchid_riskid.Size = new System.Drawing.Size(121, 28);
+            this.concat_batchid_riskid.TabIndex = 141;
+            // 
+            // associateloginid_allocation
+            // 
+            this.associateloginid_allocation.Location = new System.Drawing.Point(498, 3);
+            this.associateloginid_allocation.Name = "associateloginid_allocation";
+            this.associateloginid_allocation.Size = new System.Drawing.Size(190, 26);
+            this.associateloginid_allocation.TabIndex = 143;
+            // 
+            // pagenumber
+            // 
+            this.pagenumber.Location = new System.Drawing.Point(694, 4);
+            this.pagenumber.Maximum = new decimal(new int[] {
+            999,
+            0,
+            0,
+            0});
+            this.pagenumber.Name = "pagenumber";
+            this.pagenumber.Size = new System.Drawing.Size(93, 26);
+            this.pagenumber.TabIndex = 144;
+            // 
+            // current_datetime
+            // 
+            this.current_datetime.Location = new System.Drawing.Point(161, 5);
+            this.current_datetime.Name = "current_datetime";
+            this.current_datetime.Size = new System.Drawing.Size(200, 26);
+            this.current_datetime.TabIndex = 145;
+            // 
+            // inquirystatus_associatename
+            // 
+            this.inquirystatus_associatename.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.inquirystatus_associatename.FormattingEnabled = true;
+            this.inquirystatus_associatename.Location = new System.Drawing.Point(806, 4);
+            this.inquirystatus_associatename.Name = "inquirystatus_associatename";
+            this.inquirystatus_associatename.Size = new System.Drawing.Size(121, 28);
+            this.inquirystatus_associatename.TabIndex = 146;
+            // 
+            // adminlist
+            // 
+            this.adminlist.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.adminlist.FormattingEnabled = true;
+            this.adminlist.Location = new System.Drawing.Point(940, 4);
+            this.adminlist.Name = "adminlist";
+            this.adminlist.Size = new System.Drawing.Size(121, 28);
+            this.adminlist.TabIndex = 147;
+            // 
+            // completiondate_checkbox
+            // 
+            this.completiondate_checkbox.AutoSize = true;
+            this.completiondate_checkbox.Location = new System.Drawing.Point(1066, 451);
+            this.completiondate_checkbox.Name = "completiondate_checkbox";
+            this.completiondate_checkbox.Size = new System.Drawing.Size(261, 24);
+            this.completiondate_checkbox.TabIndex = 166;
+            this.completiondate_checkbox.Text = "Change for all the selected rows";
+            this.completiondate_checkbox.UseVisualStyleBackColor = true;
+            this.completiondate_checkbox.CheckedChanged += new System.EventHandler(this.completiondate_checkbox_CheckedChanged);
             // 
             // Form2
             // 
@@ -2187,5 +2201,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn txtUploadedBy;
         private System.Windows.Forms.CheckBox match_criteria_checkbox;
         private System.Windows.Forms.Button update_bulk;
+        private System.Windows.Forms.CheckBox completiondate_checkbox;
     }
 }
