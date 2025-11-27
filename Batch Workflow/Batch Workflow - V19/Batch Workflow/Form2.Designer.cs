@@ -146,6 +146,7 @@
             this.current_datetime = new System.Windows.Forms.DateTimePicker();
             this.inquirystatus_associatename = new System.Windows.Forms.ComboBox();
             this.adminlist = new System.Windows.Forms.ComboBox();
+            this.txt_CheckValue = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.txtRequestIDbatch = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.txtBatchIDbatch = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.txtInquiryIDbatch = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -199,6 +200,8 @@
             this.txtUploadDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.txtUploadTime = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.txtUploadedBy = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.match_criteria_checkbox = new System.Windows.Forms.CheckBox();
+            this.update_bulk = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.noofhits)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.batchworkflow_datagridview)).BeginInit();
@@ -222,6 +225,8 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.update_bulk);
+            this.groupBox1.Controls.Add(this.match_criteria_checkbox);
             this.groupBox1.Controls.Add(this.smsoapprovedby);
             this.groupBox1.Controls.Add(this.approvedby);
             this.groupBox1.Controls.Add(this.label38);
@@ -386,7 +391,7 @@
             // 
             this.allocationdate.CustomFormat = " ";
             this.allocationdate.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.allocationdate.Location = new System.Drawing.Point(310, 535);
+            this.allocationdate.Location = new System.Drawing.Point(114, 493);
             this.allocationdate.Name = "allocationdate";
             this.allocationdate.Size = new System.Drawing.Size(83, 26);
             this.allocationdate.TabIndex = 158;
@@ -397,7 +402,7 @@
             // 
             this.uploadtime.CustomFormat = " ";
             this.uploadtime.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.uploadtime.Location = new System.Drawing.Point(1243, 535);
+            this.uploadtime.Location = new System.Drawing.Point(1333, 465);
             this.uploadtime.Name = "uploadtime";
             this.uploadtime.ShowUpDown = true;
             this.uploadtime.Size = new System.Drawing.Size(97, 26);
@@ -409,7 +414,7 @@
             // 
             this.project_lastupdatedtime.CustomFormat = " ";
             this.project_lastupdatedtime.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.project_lastupdatedtime.Location = new System.Drawing.Point(936, 534);
+            this.project_lastupdatedtime.Location = new System.Drawing.Point(1224, 493);
             this.project_lastupdatedtime.Name = "project_lastupdatedtime";
             this.project_lastupdatedtime.ShowUpDown = true;
             this.project_lastupdatedtime.Size = new System.Drawing.Size(104, 26);
@@ -421,10 +426,10 @@
             // 
             this.allocationtime.CustomFormat = " ";
             this.allocationtime.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.allocationtime.Location = new System.Drawing.Point(401, 535);
+            this.allocationtime.Location = new System.Drawing.Point(114, 518);
             this.allocationtime.Name = "allocationtime";
             this.allocationtime.ShowUpDown = true;
-            this.allocationtime.Size = new System.Drawing.Size(110, 26);
+            this.allocationtime.Size = new System.Drawing.Size(83, 26);
             this.allocationtime.TabIndex = 155;
             this.allocationtime.KeyDown += new System.Windows.Forms.KeyEventHandler(this.allocationtime_KeyDown);
             this.allocationtime.MouseDown += new System.Windows.Forms.MouseEventHandler(this.allocationtime_MouseDown);
@@ -433,7 +438,7 @@
             // 
             this.uploaddate.CustomFormat = " ";
             this.uploaddate.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.uploaddate.Location = new System.Drawing.Point(1153, 535);
+            this.uploaddate.Location = new System.Drawing.Point(1333, 491);
             this.uploaddate.Name = "uploaddate";
             this.uploaddate.Size = new System.Drawing.Size(83, 26);
             this.uploaddate.TabIndex = 154;
@@ -442,7 +447,7 @@
             // 
             // uploadedby
             // 
-            this.uploadedby.Location = new System.Drawing.Point(1046, 535);
+            this.uploadedby.Location = new System.Drawing.Point(1334, 518);
             this.uploadedby.Name = "uploadedby";
             this.uploadedby.Size = new System.Drawing.Size(100, 26);
             this.uploadedby.TabIndex = 153;
@@ -451,7 +456,7 @@
             // 
             this.project_lastupdateddate.CustomFormat = " ";
             this.project_lastupdateddate.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.project_lastupdateddate.Location = new System.Drawing.Point(835, 535);
+            this.project_lastupdateddate.Location = new System.Drawing.Point(1224, 518);
             this.project_lastupdateddate.Name = "project_lastupdateddate";
             this.project_lastupdateddate.Size = new System.Drawing.Size(94, 26);
             this.project_lastupdateddate.TabIndex = 152;
@@ -481,7 +486,7 @@
             // 
             // project_lastupdatedby
             // 
-            this.project_lastupdatedby.Location = new System.Drawing.Point(728, 535);
+            this.project_lastupdatedby.Location = new System.Drawing.Point(1118, 493);
             this.project_lastupdatedby.Name = "project_lastupdatedby";
             this.project_lastupdatedby.Size = new System.Drawing.Size(100, 26);
             this.project_lastupdatedby.TabIndex = 151;
@@ -501,7 +506,7 @@
             // 
             // allocatedby
             // 
-            this.allocatedby.Location = new System.Drawing.Point(516, 535);
+            this.allocatedby.Location = new System.Drawing.Point(203, 495);
             this.allocatedby.Name = "allocatedby";
             this.allocatedby.Size = new System.Drawing.Size(100, 26);
             this.allocatedby.TabIndex = 150;
@@ -517,7 +522,7 @@
             // 
             // projectnonproject
             // 
-            this.projectnonproject.Location = new System.Drawing.Point(622, 535);
+            this.projectnonproject.Location = new System.Drawing.Point(203, 527);
             this.projectnonproject.Name = "projectnonproject";
             this.projectnonproject.Size = new System.Drawing.Size(100, 26);
             this.projectnonproject.TabIndex = 148;
@@ -533,7 +538,7 @@
             // 
             // associateloginid_allocation1
             // 
-            this.associateloginid_allocation1.Location = new System.Drawing.Point(204, 535);
+            this.associateloginid_allocation1.Location = new System.Drawing.Point(8, 518);
             this.associateloginid_allocation1.Name = "associateloginid_allocation1";
             this.associateloginid_allocation1.Size = new System.Drawing.Size(100, 26);
             this.associateloginid_allocation1.TabIndex = 147;
@@ -547,7 +552,7 @@
             // 
             // associatename_allocation
             // 
-            this.associatename_allocation.Location = new System.Drawing.Point(97, 534);
+            this.associatename_allocation.Location = new System.Drawing.Point(8, 491);
             this.associatename_allocation.Name = "associatename_allocation";
             this.associatename_allocation.Size = new System.Drawing.Size(100, 26);
             this.associatename_allocation.TabIndex = 146;
@@ -654,7 +659,7 @@
             // 
             // reset
             // 
-            this.reset.Location = new System.Drawing.Point(932, 470);
+            this.reset.Location = new System.Drawing.Point(833, 497);
             this.reset.Name = "reset";
             this.reset.Size = new System.Drawing.Size(90, 47);
             this.reset.TabIndex = 63;
@@ -664,7 +669,7 @@
             // 
             // update
             // 
-            this.update.Location = new System.Drawing.Point(828, 470);
+            this.update.Location = new System.Drawing.Point(737, 497);
             this.update.Name = "update";
             this.update.Size = new System.Drawing.Size(90, 47);
             this.update.TabIndex = 62;
@@ -674,7 +679,7 @@
             // 
             // insert
             // 
-            this.insert.Location = new System.Drawing.Point(724, 470);
+            this.insert.Location = new System.Drawing.Point(641, 497);
             this.insert.Name = "insert";
             this.insert.Size = new System.Drawing.Size(90, 47);
             this.insert.TabIndex = 61;
@@ -1188,6 +1193,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.batchworkflow_datagridview.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.batchworkflow_datagridview.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.txt_CheckValue,
             this.txtRequestIDbatch,
             this.txtBatchIDbatch,
             this.txtInquiryIDbatch,
@@ -1243,7 +1249,6 @@
             this.txtUploadedBy});
             this.batchworkflow_datagridview.Location = new System.Drawing.Point(22, 91);
             this.batchworkflow_datagridview.Name = "batchworkflow_datagridview";
-            this.batchworkflow_datagridview.ReadOnly = true;
             this.batchworkflow_datagridview.RowHeadersWidth = 62;
             this.batchworkflow_datagridview.RowTemplate.Height = 28;
             this.batchworkflow_datagridview.Size = new System.Drawing.Size(1823, 328);
@@ -1521,13 +1526,19 @@
             this.adminlist.Size = new System.Drawing.Size(121, 28);
             this.adminlist.TabIndex = 147;
             // 
+            // txt_CheckValue
+            // 
+            this.txt_CheckValue.HeaderText = "CheckValue";
+            this.txt_CheckValue.MinimumWidth = 8;
+            this.txt_CheckValue.Name = "txt_CheckValue";
+            this.txt_CheckValue.Width = 150;
+            // 
             // txtRequestIDbatch
             // 
             this.txtRequestIDbatch.DataPropertyName = "RequestID";
             this.txtRequestIDbatch.HeaderText = "RequestID";
             this.txtRequestIDbatch.MinimumWidth = 8;
             this.txtRequestIDbatch.Name = "txtRequestIDbatch";
-            this.txtRequestIDbatch.ReadOnly = true;
             this.txtRequestIDbatch.Width = 150;
             // 
             // txtBatchIDbatch
@@ -1536,7 +1547,6 @@
             this.txtBatchIDbatch.HeaderText = "BatchID";
             this.txtBatchIDbatch.MinimumWidth = 8;
             this.txtBatchIDbatch.Name = "txtBatchIDbatch";
-            this.txtBatchIDbatch.ReadOnly = true;
             this.txtBatchIDbatch.Width = 150;
             // 
             // txtInquiryIDbatch
@@ -1545,7 +1555,6 @@
             this.txtInquiryIDbatch.HeaderText = "InquiryID";
             this.txtInquiryIDbatch.MinimumWidth = 8;
             this.txtInquiryIDbatch.Name = "txtInquiryIDbatch";
-            this.txtInquiryIDbatch.ReadOnly = true;
             this.txtInquiryIDbatch.Width = 150;
             // 
             // txtRiskIDbatch
@@ -1554,7 +1563,6 @@
             this.txtRiskIDbatch.HeaderText = "RiskID";
             this.txtRiskIDbatch.MinimumWidth = 8;
             this.txtRiskIDbatch.Name = "txtRiskIDbatch";
-            this.txtRiskIDbatch.ReadOnly = true;
             this.txtRiskIDbatch.Width = 150;
             // 
             // txtentityidbatch
@@ -1563,7 +1571,6 @@
             this.txtentityidbatch.HeaderText = "EntityID";
             this.txtentityidbatch.MinimumWidth = 8;
             this.txtentityidbatch.Name = "txtentityidbatch";
-            this.txtentityidbatch.ReadOnly = true;
             this.txtentityidbatch.Width = 150;
             // 
             // txtTrackingIDbatch
@@ -1572,7 +1579,6 @@
             this.txtTrackingIDbatch.HeaderText = "TrackingID";
             this.txtTrackingIDbatch.MinimumWidth = 8;
             this.txtTrackingIDbatch.Name = "txtTrackingIDbatch";
-            this.txtTrackingIDbatch.ReadOnly = true;
             this.txtTrackingIDbatch.Width = 150;
             // 
             // txtReceivedDatebatch
@@ -1581,7 +1587,6 @@
             this.txtReceivedDatebatch.HeaderText = "ReceivedDate";
             this.txtReceivedDatebatch.MinimumWidth = 8;
             this.txtReceivedDatebatch.Name = "txtReceivedDatebatch";
-            this.txtReceivedDatebatch.ReadOnly = true;
             this.txtReceivedDatebatch.Width = 150;
             // 
             // txtReceivedTimebatch
@@ -1590,7 +1595,6 @@
             this.txtReceivedTimebatch.HeaderText = "ReceivedTime";
             this.txtReceivedTimebatch.MinimumWidth = 8;
             this.txtReceivedTimebatch.Name = "txtReceivedTimebatch";
-            this.txtReceivedTimebatch.ReadOnly = true;
             this.txtReceivedTimebatch.Width = 150;
             // 
             // txtEntityTypebatch
@@ -1599,7 +1603,6 @@
             this.txtEntityTypebatch.HeaderText = "EntityType";
             this.txtEntityTypebatch.MinimumWidth = 8;
             this.txtEntityTypebatch.Name = "txtEntityTypebatch";
-            this.txtEntityTypebatch.ReadOnly = true;
             this.txtEntityTypebatch.Width = 150;
             // 
             // txtPartyNamebatch
@@ -1608,7 +1611,6 @@
             this.txtPartyNamebatch.HeaderText = "PartyName";
             this.txtPartyNamebatch.MinimumWidth = 8;
             this.txtPartyNamebatch.Name = "txtPartyNamebatch";
-            this.txtPartyNamebatch.ReadOnly = true;
             this.txtPartyNamebatch.Width = 150;
             // 
             // txtSourceBUbatch
@@ -1617,7 +1619,6 @@
             this.txtSourceBUbatch.HeaderText = "SourceBU";
             this.txtSourceBUbatch.MinimumWidth = 8;
             this.txtSourceBUbatch.Name = "txtSourceBUbatch";
-            this.txtSourceBUbatch.ReadOnly = true;
             this.txtSourceBUbatch.Width = 150;
             // 
             // txtNoOfHitsbatch
@@ -1626,7 +1627,6 @@
             this.txtNoOfHitsbatch.HeaderText = "NoOfHits";
             this.txtNoOfHitsbatch.MinimumWidth = 8;
             this.txtNoOfHitsbatch.Name = "txtNoOfHitsbatch";
-            this.txtNoOfHitsbatch.ReadOnly = true;
             this.txtNoOfHitsbatch.Width = 150;
             // 
             // txtRiskCategorybatch
@@ -1635,7 +1635,6 @@
             this.txtRiskCategorybatch.HeaderText = "RiskCategory";
             this.txtRiskCategorybatch.MinimumWidth = 8;
             this.txtRiskCategorybatch.Name = "txtRiskCategorybatch";
-            this.txtRiskCategorybatch.ReadOnly = true;
             this.txtRiskCategorybatch.Width = 150;
             // 
             // txtEventCodesbatch
@@ -1644,7 +1643,6 @@
             this.txtEventCodesbatch.HeaderText = "EventCodes";
             this.txtEventCodesbatch.MinimumWidth = 8;
             this.txtEventCodesbatch.Name = "txtEventCodesbatch";
-            this.txtEventCodesbatch.ReadOnly = true;
             this.txtEventCodesbatch.Width = 150;
             // 
             // txtMatchCriteriabatch
@@ -1653,7 +1651,6 @@
             this.txtMatchCriteriabatch.HeaderText = "MatchCriteria";
             this.txtMatchCriteriabatch.MinimumWidth = 8;
             this.txtMatchCriteriabatch.Name = "txtMatchCriteriabatch";
-            this.txtMatchCriteriabatch.ReadOnly = true;
             this.txtMatchCriteriabatch.Width = 150;
             // 
             // txtQueryRaisedDatebatch
@@ -1662,7 +1659,6 @@
             this.txtQueryRaisedDatebatch.HeaderText = "QueryRaisedDate";
             this.txtQueryRaisedDatebatch.MinimumWidth = 8;
             this.txtQueryRaisedDatebatch.Name = "txtQueryRaisedDatebatch";
-            this.txtQueryRaisedDatebatch.ReadOnly = true;
             this.txtQueryRaisedDatebatch.Width = 150;
             // 
             // txtQueryRaisedTimebatch
@@ -1671,7 +1667,6 @@
             this.txtQueryRaisedTimebatch.HeaderText = "QueryRaisedTime";
             this.txtQueryRaisedTimebatch.MinimumWidth = 8;
             this.txtQueryRaisedTimebatch.Name = "txtQueryRaisedTimebatch";
-            this.txtQueryRaisedTimebatch.ReadOnly = true;
             this.txtQueryRaisedTimebatch.Width = 150;
             // 
             // txtQueryResolvedDatebatch
@@ -1680,7 +1675,6 @@
             this.txtQueryResolvedDatebatch.HeaderText = "QueryResolvedDate";
             this.txtQueryResolvedDatebatch.MinimumWidth = 8;
             this.txtQueryResolvedDatebatch.Name = "txtQueryResolvedDatebatch";
-            this.txtQueryResolvedDatebatch.ReadOnly = true;
             this.txtQueryResolvedDatebatch.Width = 150;
             // 
             // txtQueryResolvedTimebatch
@@ -1689,7 +1683,6 @@
             this.txtQueryResolvedTimebatch.HeaderText = "QueryResolvedTime";
             this.txtQueryResolvedTimebatch.MinimumWidth = 8;
             this.txtQueryResolvedTimebatch.Name = "txtQueryResolvedTimebatch";
-            this.txtQueryResolvedTimebatch.ReadOnly = true;
             this.txtQueryResolvedTimebatch.Width = 150;
             // 
             // txtQueryRemarksbatch
@@ -1698,7 +1691,6 @@
             this.txtQueryRemarksbatch.HeaderText = "QueryRemarks";
             this.txtQueryRemarksbatch.MinimumWidth = 8;
             this.txtQueryRemarksbatch.Name = "txtQueryRemarksbatch";
-            this.txtQueryRemarksbatch.ReadOnly = true;
             this.txtQueryRemarksbatch.Width = 150;
             // 
             // txtApprovalRaisedDatebatch
@@ -1707,7 +1699,6 @@
             this.txtApprovalRaisedDatebatch.HeaderText = "ApprovalRaisedDate";
             this.txtApprovalRaisedDatebatch.MinimumWidth = 8;
             this.txtApprovalRaisedDatebatch.Name = "txtApprovalRaisedDatebatch";
-            this.txtApprovalRaisedDatebatch.ReadOnly = true;
             this.txtApprovalRaisedDatebatch.Width = 150;
             // 
             // txtApprovalRaisedTimebatch
@@ -1716,7 +1707,6 @@
             this.txtApprovalRaisedTimebatch.HeaderText = "ApprovalRaisedTime";
             this.txtApprovalRaisedTimebatch.MinimumWidth = 8;
             this.txtApprovalRaisedTimebatch.Name = "txtApprovalRaisedTimebatch";
-            this.txtApprovalRaisedTimebatch.ReadOnly = true;
             this.txtApprovalRaisedTimebatch.Width = 150;
             // 
             // txtApprovalReceivedDatebatch
@@ -1725,7 +1715,6 @@
             this.txtApprovalReceivedDatebatch.HeaderText = "ApprovalReceivedDate";
             this.txtApprovalReceivedDatebatch.MinimumWidth = 8;
             this.txtApprovalReceivedDatebatch.Name = "txtApprovalReceivedDatebatch";
-            this.txtApprovalReceivedDatebatch.ReadOnly = true;
             this.txtApprovalReceivedDatebatch.Width = 150;
             // 
             // txtApprovalReceivedTimebatch
@@ -1734,7 +1723,6 @@
             this.txtApprovalReceivedTimebatch.HeaderText = "ApprovalReceivedTime";
             this.txtApprovalReceivedTimebatch.MinimumWidth = 8;
             this.txtApprovalReceivedTimebatch.Name = "txtApprovalReceivedTimebatch";
-            this.txtApprovalReceivedTimebatch.ReadOnly = true;
             this.txtApprovalReceivedTimebatch.Width = 150;
             // 
             // txtTypeOfApprovalbatch
@@ -1743,7 +1731,6 @@
             this.txtTypeOfApprovalbatch.HeaderText = "TypeOfApproval";
             this.txtTypeOfApprovalbatch.MinimumWidth = 8;
             this.txtTypeOfApprovalbatch.Name = "txtTypeOfApprovalbatch";
-            this.txtTypeOfApprovalbatch.ReadOnly = true;
             this.txtTypeOfApprovalbatch.Width = 150;
             // 
             // txtApprovedBy
@@ -1752,7 +1739,6 @@
             this.txtApprovedBy.HeaderText = "ApprovedBy";
             this.txtApprovedBy.MinimumWidth = 8;
             this.txtApprovedBy.Name = "txtApprovedBy";
-            this.txtApprovedBy.ReadOnly = true;
             this.txtApprovedBy.Width = 150;
             // 
             // txtCompletionDatebatch
@@ -1761,7 +1747,6 @@
             this.txtCompletionDatebatch.HeaderText = "CompletionDate";
             this.txtCompletionDatebatch.MinimumWidth = 8;
             this.txtCompletionDatebatch.Name = "txtCompletionDatebatch";
-            this.txtCompletionDatebatch.ReadOnly = true;
             this.txtCompletionDatebatch.Width = 150;
             // 
             // txtCompletionTimebatch
@@ -1770,7 +1755,6 @@
             this.txtCompletionTimebatch.HeaderText = "CompletionTime";
             this.txtCompletionTimebatch.MinimumWidth = 8;
             this.txtCompletionTimebatch.Name = "txtCompletionTimebatch";
-            this.txtCompletionTimebatch.ReadOnly = true;
             this.txtCompletionTimebatch.Width = 150;
             // 
             // txtSMSORaisedDatebatch
@@ -1779,7 +1763,6 @@
             this.txtSMSORaisedDatebatch.HeaderText = "SMSORaisedDate";
             this.txtSMSORaisedDatebatch.MinimumWidth = 8;
             this.txtSMSORaisedDatebatch.Name = "txtSMSORaisedDatebatch";
-            this.txtSMSORaisedDatebatch.ReadOnly = true;
             this.txtSMSORaisedDatebatch.Width = 150;
             // 
             // txtSMSORaisedTimebatch
@@ -1788,7 +1771,6 @@
             this.txtSMSORaisedTimebatch.HeaderText = "SMSORaisedTime";
             this.txtSMSORaisedTimebatch.MinimumWidth = 8;
             this.txtSMSORaisedTimebatch.Name = "txtSMSORaisedTimebatch";
-            this.txtSMSORaisedTimebatch.ReadOnly = true;
             this.txtSMSORaisedTimebatch.Width = 150;
             // 
             // txtSMSOReceivedDatebatch
@@ -1797,7 +1779,6 @@
             this.txtSMSOReceivedDatebatch.HeaderText = "SMSOReceivedDate";
             this.txtSMSOReceivedDatebatch.MinimumWidth = 8;
             this.txtSMSOReceivedDatebatch.Name = "txtSMSOReceivedDatebatch";
-            this.txtSMSOReceivedDatebatch.ReadOnly = true;
             this.txtSMSOReceivedDatebatch.Width = 150;
             // 
             // txtSMSOReceivedTimebatch
@@ -1806,7 +1787,6 @@
             this.txtSMSOReceivedTimebatch.HeaderText = "SMSOReceivedTime";
             this.txtSMSOReceivedTimebatch.MinimumWidth = 8;
             this.txtSMSOReceivedTimebatch.Name = "txtSMSOReceivedTimebatch";
-            this.txtSMSOReceivedTimebatch.ReadOnly = true;
             this.txtSMSOReceivedTimebatch.Width = 150;
             // 
             // txtSMSOApprovedBybatch
@@ -1815,7 +1795,6 @@
             this.txtSMSOApprovedBybatch.HeaderText = "SMSOApprovedBy";
             this.txtSMSOApprovedBybatch.MinimumWidth = 8;
             this.txtSMSOApprovedBybatch.Name = "txtSMSOApprovedBybatch";
-            this.txtSMSOApprovedBybatch.ReadOnly = true;
             this.txtSMSOApprovedBybatch.Width = 150;
             // 
             // txtApprovalRejectionCommentbatch
@@ -1824,7 +1803,6 @@
             this.txtApprovalRejectionCommentbatch.HeaderText = "ApprovalRejectionComment";
             this.txtApprovalRejectionCommentbatch.MinimumWidth = 8;
             this.txtApprovalRejectionCommentbatch.Name = "txtApprovalRejectionCommentbatch";
-            this.txtApprovalRejectionCommentbatch.ReadOnly = true;
             this.txtApprovalRejectionCommentbatch.Width = 150;
             // 
             // txtChaser1Datebatch
@@ -1833,7 +1811,6 @@
             this.txtChaser1Datebatch.HeaderText = "Chaser1Date";
             this.txtChaser1Datebatch.MinimumWidth = 8;
             this.txtChaser1Datebatch.Name = "txtChaser1Datebatch";
-            this.txtChaser1Datebatch.ReadOnly = true;
             this.txtChaser1Datebatch.Width = 150;
             // 
             // txtChaser2Datebatch
@@ -1842,7 +1819,6 @@
             this.txtChaser2Datebatch.HeaderText = "Chaser2Date";
             this.txtChaser2Datebatch.MinimumWidth = 8;
             this.txtChaser2Datebatch.Name = "txtChaser2Datebatch";
-            this.txtChaser2Datebatch.ReadOnly = true;
             this.txtChaser2Datebatch.Width = 150;
             // 
             // txtChaser3Datebatch
@@ -1851,7 +1827,6 @@
             this.txtChaser3Datebatch.HeaderText = "Chaser3Date";
             this.txtChaser3Datebatch.MinimumWidth = 8;
             this.txtChaser3Datebatch.Name = "txtChaser3Datebatch";
-            this.txtChaser3Datebatch.ReadOnly = true;
             this.txtChaser3Datebatch.Width = 150;
             // 
             // txtRequestorEmailAddressbatch
@@ -1860,7 +1835,6 @@
             this.txtRequestorEmailAddressbatch.HeaderText = "RequestorEmailAddress";
             this.txtRequestorEmailAddressbatch.MinimumWidth = 8;
             this.txtRequestorEmailAddressbatch.Name = "txtRequestorEmailAddressbatch";
-            this.txtRequestorEmailAddressbatch.ReadOnly = true;
             this.txtRequestorEmailAddressbatch.Width = 150;
             // 
             // txtFinalStatusbatch
@@ -1869,7 +1843,6 @@
             this.txtFinalStatusbatch.HeaderText = "FinalStatus";
             this.txtFinalStatusbatch.MinimumWidth = 8;
             this.txtFinalStatusbatch.Name = "txtFinalStatusbatch";
-            this.txtFinalStatusbatch.ReadOnly = true;
             this.txtFinalStatusbatch.Width = 150;
             // 
             // txtPageNumber
@@ -1878,7 +1851,6 @@
             this.txtPageNumber.HeaderText = "PageNumber";
             this.txtPageNumber.MinimumWidth = 8;
             this.txtPageNumber.Name = "txtPageNumber";
-            this.txtPageNumber.ReadOnly = true;
             this.txtPageNumber.Width = 150;
             // 
             // txtInquiryStatus
@@ -1887,7 +1859,6 @@
             this.txtInquiryStatus.HeaderText = "InquiryStatus";
             this.txtInquiryStatus.MinimumWidth = 8;
             this.txtInquiryStatus.Name = "txtInquiryStatus";
-            this.txtInquiryStatus.ReadOnly = true;
             this.txtInquiryStatus.Width = 150;
             // 
             // txtAssociateName_Allocation
@@ -1896,7 +1867,6 @@
             this.txtAssociateName_Allocation.HeaderText = "AssociateName_Allocation";
             this.txtAssociateName_Allocation.MinimumWidth = 8;
             this.txtAssociateName_Allocation.Name = "txtAssociateName_Allocation";
-            this.txtAssociateName_Allocation.ReadOnly = true;
             this.txtAssociateName_Allocation.Width = 150;
             // 
             // txtAssociateLoginID_Allocation
@@ -1905,7 +1875,6 @@
             this.txtAssociateLoginID_Allocation.HeaderText = "AssociateLoginID_Allocation";
             this.txtAssociateLoginID_Allocation.MinimumWidth = 8;
             this.txtAssociateLoginID_Allocation.Name = "txtAssociateLoginID_Allocation";
-            this.txtAssociateLoginID_Allocation.ReadOnly = true;
             this.txtAssociateLoginID_Allocation.Width = 150;
             // 
             // txtAllocationDate
@@ -1914,7 +1883,6 @@
             this.txtAllocationDate.HeaderText = "AllocationDate";
             this.txtAllocationDate.MinimumWidth = 8;
             this.txtAllocationDate.Name = "txtAllocationDate";
-            this.txtAllocationDate.ReadOnly = true;
             this.txtAllocationDate.Width = 150;
             // 
             // txtAllocationTime
@@ -1923,7 +1891,6 @@
             this.txtAllocationTime.HeaderText = "AllocationTime";
             this.txtAllocationTime.MinimumWidth = 8;
             this.txtAllocationTime.Name = "txtAllocationTime";
-            this.txtAllocationTime.ReadOnly = true;
             this.txtAllocationTime.Width = 150;
             // 
             // txtAllocatedBy
@@ -1932,7 +1899,6 @@
             this.txtAllocatedBy.HeaderText = "AllocatedBy";
             this.txtAllocatedBy.MinimumWidth = 8;
             this.txtAllocatedBy.Name = "txtAllocatedBy";
-            this.txtAllocatedBy.ReadOnly = true;
             this.txtAllocatedBy.Width = 150;
             // 
             // txtProjectNonProject
@@ -1941,7 +1907,6 @@
             this.txtProjectNonProject.HeaderText = "ProjectNonProject";
             this.txtProjectNonProject.MinimumWidth = 8;
             this.txtProjectNonProject.Name = "txtProjectNonProject";
-            this.txtProjectNonProject.ReadOnly = true;
             this.txtProjectNonProject.Width = 150;
             // 
             // txtProject_LastUpdatedBy
@@ -1950,7 +1915,6 @@
             this.txtProject_LastUpdatedBy.HeaderText = "Project_LastUpdatedBy";
             this.txtProject_LastUpdatedBy.MinimumWidth = 8;
             this.txtProject_LastUpdatedBy.Name = "txtProject_LastUpdatedBy";
-            this.txtProject_LastUpdatedBy.ReadOnly = true;
             this.txtProject_LastUpdatedBy.Width = 150;
             // 
             // txtProject_LastUpdatedDate
@@ -1959,7 +1923,6 @@
             this.txtProject_LastUpdatedDate.HeaderText = "Project_LastUpdatedDate";
             this.txtProject_LastUpdatedDate.MinimumWidth = 8;
             this.txtProject_LastUpdatedDate.Name = "txtProject_LastUpdatedDate";
-            this.txtProject_LastUpdatedDate.ReadOnly = true;
             this.txtProject_LastUpdatedDate.Width = 150;
             // 
             // txtProject_LastUpdatedTime
@@ -1968,7 +1931,6 @@
             this.txtProject_LastUpdatedTime.HeaderText = "Project_LastUpdatedTime";
             this.txtProject_LastUpdatedTime.MinimumWidth = 8;
             this.txtProject_LastUpdatedTime.Name = "txtProject_LastUpdatedTime";
-            this.txtProject_LastUpdatedTime.ReadOnly = true;
             this.txtProject_LastUpdatedTime.Width = 150;
             // 
             // txtUploadDate
@@ -1977,7 +1939,6 @@
             this.txtUploadDate.HeaderText = "UploadDate";
             this.txtUploadDate.MinimumWidth = 8;
             this.txtUploadDate.Name = "txtUploadDate";
-            this.txtUploadDate.ReadOnly = true;
             this.txtUploadDate.Width = 150;
             // 
             // txtUploadTime
@@ -1986,7 +1947,6 @@
             this.txtUploadTime.HeaderText = "UploadTime";
             this.txtUploadTime.MinimumWidth = 8;
             this.txtUploadTime.Name = "txtUploadTime";
-            this.txtUploadTime.ReadOnly = true;
             this.txtUploadTime.Width = 150;
             // 
             // txtUploadedBy
@@ -1995,8 +1955,27 @@
             this.txtUploadedBy.HeaderText = "UploadedBy";
             this.txtUploadedBy.MinimumWidth = 8;
             this.txtUploadedBy.Name = "txtUploadedBy";
-            this.txtUploadedBy.ReadOnly = true;
             this.txtUploadedBy.Width = 150;
+            // 
+            // match_criteria_checkbox
+            // 
+            this.match_criteria_checkbox.AutoSize = true;
+            this.match_criteria_checkbox.Location = new System.Drawing.Point(340, 247);
+            this.match_criteria_checkbox.Name = "match_criteria_checkbox";
+            this.match_criteria_checkbox.Size = new System.Drawing.Size(261, 24);
+            this.match_criteria_checkbox.TabIndex = 164;
+            this.match_criteria_checkbox.Text = "Change for all the selected rows";
+            this.match_criteria_checkbox.UseVisualStyleBackColor = true;
+            // 
+            // update_bulk
+            // 
+            this.update_bulk.Location = new System.Drawing.Point(929, 497);
+            this.update_bulk.Name = "update_bulk";
+            this.update_bulk.Size = new System.Drawing.Size(124, 47);
+            this.update_bulk.TabIndex = 165;
+            this.update_bulk.Text = "Update Bulk";
+            this.update_bulk.UseVisualStyleBackColor = true;
+            this.update_bulk.Click += new System.EventHandler(this.update_bulk_Click);
             // 
             // Form2
             // 
@@ -2152,6 +2131,7 @@
         private System.Windows.Forms.Label label38;
         private System.Windows.Forms.ComboBox smsoapprovedby;
         private System.Windows.Forms.ComboBox adminlist;
+        private System.Windows.Forms.DataGridViewCheckBoxColumn txt_CheckValue;
         private System.Windows.Forms.DataGridViewTextBoxColumn txtRequestIDbatch;
         private System.Windows.Forms.DataGridViewTextBoxColumn txtBatchIDbatch;
         private System.Windows.Forms.DataGridViewTextBoxColumn txtInquiryIDbatch;
@@ -2205,5 +2185,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn txtUploadDate;
         private System.Windows.Forms.DataGridViewTextBoxColumn txtUploadTime;
         private System.Windows.Forms.DataGridViewTextBoxColumn txtUploadedBy;
+        private System.Windows.Forms.CheckBox match_criteria_checkbox;
+        private System.Windows.Forms.Button update_bulk;
     }
 }

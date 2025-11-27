@@ -2972,9 +2972,64 @@ namespace Batch_Workflow
 
         }
 
-       
+        private void update_bulk_Click(object sender, EventArgs e)
+        {
+            if (match_criteria_checkbox.Checked == false)
+            {
+                MessageBox.Show("Please select the check box under Match Criteria to update the records in bulk");
+            }
+            else if (string.IsNullOrEmpty(matchcriteria.Text))
+            {
+                MessageBox.Show("Please update Match Criteria");
+            }
+            else if (completiondate.Text.Trim() == string.Empty)
+            {
+                MessageBox.Show("Please update Comlpetion Date");
+            }
+            else if (completiontime.Text.Trim() == string.Empty)
+            {
+                MessageBox.Show("Please update Completion Time");
+            }
+            else
+            {
+                try
+                {
+                    foreach (DataGridViewRow item in batchworkflow_datagridview.Rows)
+                    {
+                        bool isselected = Convert.ToBoolean(item.Cells["txt_CheckValue"].Value);
+                        //if ((bool)item.Cells["txtCheckValue"].Value == true)
+                        if (isselected)
+                        {
+                            if (conn.State == ConnectionState.Open)
+                            {
+                                conn.Close();
+                            }
 
-        
+                            cmd.Parameters.Clear();
+                            conn.ConnectionString = connectionstringtxt;
+                            cmd.Connection = conn;
+                            cmd.CommandType = CommandType.StoredProcedure;
+                            cmd.CommandText = "dbo.usp_batchworkflow_update_matchcriteria_completiondate_bulk_dotnet";
+                            cmd.Parameters.AddWithValue("@RequestID", Convert.ToInt32(item.Cells["txtRequestIDbatch"].Value));
+                            cmd.Parameters.AddWithValue("@CompletionDate", completiondate.Value.Date);
+                            cmd.Parameters.AddWithValue("@CompletionTime", completiontime.Value.ToLongTimeString());
+                            cmd.Parameters.AddWithValue("@MatchCriteria", matchcriteria.Text);
+                            cmd.Parameters.AddWithValue("@LastUpdatedBy", Environment.UserName.ToString());
 
+                            conn.Open();
+                            cmd.ExecuteNonQuery();
+                            cmd.Parameters.Clear();
+                            conn.Close();
+                        }
+                    }
+                    MessageBox.Show("Records Updated Successfully");
+                    datagridview_batchworkflow_display_overall();
+                }
+                catch (Exception ab)
+                {
+                    MessageBox.Show("Error Generated Details: " + ab.ToString());
+                }
+            }
+        }
     }
 }
