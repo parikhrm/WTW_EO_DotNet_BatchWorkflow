@@ -2242,275 +2242,283 @@ namespace Batch_Workflow
 
         private void batchworkflow_datagridview_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            string messsage = "Do you want to update the record?";
-            string title = "Message Box";
-            MessageBoxButtons buttons = MessageBoxButtons.YesNo;
-            DialogResult result = MessageBox.Show(messsage, title, buttons);
-            if (result == DialogResult.Yes)
+            if (e.ColumnIndex == 0)
             {
-                if (e.RowIndex >= 0)
-                {
-                    DataGridViewRow row = this.batchworkflow_datagridview.Rows[e.RowIndex];
-                    requestid.Text = row.Cells["txtRequestIDbatch"].Value.ToString();
-                    batchid.Text = row.Cells["txtBatchIDbatch"].Value.ToString();
-                    inquiryid.Text = row.Cells["txtInquiryIDbatch"].Value.ToString();
-                    if (string.IsNullOrEmpty(row.Cells["txtRiskIDbatch"].Value.ToString()))
-                    {
-                        riskid.Text = string.Empty;
-                    }
-                    else
-                    {
-                        riskid.Text = row.Cells["txtRiskIDbatch"].Value.ToString();
-                    }
-                    trackingid.Text = row.Cells["txtTrackingIDbatch"].Value.ToString();
-                    receiveddate.Text = row.Cells["txtReceivedDatebatch"].Value.ToString();
-                    receiveddate.CustomFormat = "dd-MMMM-yyyy";
-                    receivedtime.Text = row.Cells["txtReceivedTimebatch"].Value.ToString();
-                    receivedtime.CustomFormat = "HH:mm:ss";
-                    entitytype.Text = row.Cells["txtEntityTypebatch"].Value.ToString();
-                    partyname.Text = row.Cells["txtPartyNamebatch"].Value.ToString();
-                    sourcebu.Text = row.Cells["txtSourceBUbatch"].Value.ToString();
-                    noofhits.Value = Convert.ToInt32(row.Cells["txtNoOfHitsbatch"].Value);
-                    if (string.IsNullOrEmpty(row.Cells["txtRiskCategorybatch"].Value.ToString()))
-                    {
-                        riskcategory.SelectedIndex = -1;
-                    }
-                    else
-                    {
-                        riskcategory.Text = row.Cells["txtRiskCategorybatch"].Value.ToString();
-                    }
-                    if (string.IsNullOrEmpty(row.Cells["txtEventCodesbatch"].Value.ToString()))
-                    {
-                        eventcodes.SelectedIndex = -1;
-                    }
-                    else
-                    {
-                        eventcodes.Text = row.Cells["txtEventCodesbatch"].Value.ToString();
-                    }
-                    if (string.IsNullOrEmpty(row.Cells["txtApprovedBy"].Value.ToString()))
-                    {
-                        approvedby.SelectedIndex = -1;
-                    }
-                    else
-                    {
-                        approvedby.Text = row.Cells["txtApprovedBy"].Value.ToString();
-                    }
-                    matchcriteria.Text = row.Cells["txtMatchCriteriabatch"].Value.ToString();
-                    if (string.IsNullOrEmpty(row.Cells["txtQueryRaisedDatebatch"].Value.ToString()))
-                    {
-                        queryraiseddate.CustomFormat = " ";
-                        queryraisedtime.CustomFormat = " ";
-                        queryremarks.SelectedIndex = -1;
-                    }
-                    else
-                    {
-                        queryraiseddate.Text = row.Cells["txtQueryRaisedDatebatch"].Value.ToString();
-                        queryraiseddate.CustomFormat = "dd-MMMM-yyyy";
-                        queryraisedtime.Text = row.Cells["txtQueryRaisedTimebatch"].Value.ToString();
-                        queryraisedtime.CustomFormat = "HH:mm:ss";
-                        queryremarks.Text = row.Cells["txtQueryRemarksbatch"].Value.ToString();
-                    }
-                    if (string.IsNullOrEmpty(row.Cells["txtQueryResolvedDatebatch"].Value.ToString()))
-                    {
-                        queryresolveddate.CustomFormat = " ";
-                        queryresolvedtime.CustomFormat = " ";
-                    }
-                    else
-                    {
-                        queryresolveddate.Text = row.Cells["txtQueryResolvedDatebatch"].Value.ToString();
-                        queryresolveddate.CustomFormat = "dd-MMMM-yyyy";
-                        queryresolvedtime.Text = row.Cells["txtQueryResolvedTimebatch"].Value.ToString();
-                        queryresolvedtime.CustomFormat = "HH:mm:ss";
-                    }
-                    if (string.IsNullOrEmpty(row.Cells["txtApprovalRaisedDatebatch"].Value.ToString()))
-                    {
-                        approvalraiseddate.CustomFormat = " ";
-                        approvalraisedtime.CustomFormat = " ";
-                        typeofapproval.SelectedIndex = -1;
-                    }
-                    else
-                    {
-                        approvalraiseddate.Text = row.Cells["txtApprovalRaisedDatebatch"].Value.ToString();
-                        approvalraiseddate.CustomFormat = "dd-MMMM-yyyy";
-                        approvalraisedtime.Text = row.Cells["txtApprovalRaisedTimebatch"].Value.ToString();
-                        approvalraisedtime.CustomFormat = "HH:mm:ss";
-                        typeofapproval.Text = row.Cells["txtTypeOfApprovalbatch"].Value.ToString();
-                    }
-                    if (string.IsNullOrEmpty(row.Cells["txtApprovalReceivedDatebatch"].Value.ToString()))
-                    {
-                        approvalreceiveddate.CustomFormat = " ";
-                        approvalreceivedtime.CustomFormat = " ";
-                    }
-                    else
-                    {
-                        approvalreceiveddate.Text = row.Cells["txtApprovalReceivedDatebatch"].Value.ToString();
-                        approvalreceiveddate.CustomFormat = "dd-MMMM-yyyy";
-                        approvalreceivedtime.Text = row.Cells["txtApprovalReceivedTimebatch"].Value.ToString();
-                        approvalreceivedtime.CustomFormat = "HH:mm:ss";
-                    }
-                    if (string.IsNullOrEmpty(row.Cells["txtCompletionDatebatch"].Value.ToString()))
-                    {
-                        completiondate.CustomFormat = " ";
-                        completiontime.CustomFormat = " ";
-                    }
-                    else
-                    {
-                        completiondate.Text = row.Cells["txtCompletionDatebatch"].Value.ToString();
-                        completiondate.CustomFormat = "dd-MMMM-yyyy";
-                        completiontime.Text = row.Cells["txtCompletionTimebatch"].Value.ToString();
-                        completiontime.CustomFormat = "HH:mm:ss";
-                    }
-                    if (string.IsNullOrEmpty(row.Cells["txtSMSORaisedDatebatch"].Value.ToString()))
-                    {
-                        smsoraiseddate.CustomFormat = " ";
-                        smsoraisedtime.CustomFormat = " ";
-                    }
-                    else
-                    {
-                        smsoraiseddate.Text = row.Cells["txtSMSORaisedDatebatch"].Value.ToString();
-                        smsoraiseddate.CustomFormat = "dd-MMMM-yyyy";
-                        smsoraisedtime.Text = row.Cells["txtSMSORaisedTimebatch"].Value.ToString();
-                        smsoraisedtime.CustomFormat = "HH:mm:ss";
-                    }
-                    if (string.IsNullOrEmpty(row.Cells["txtSMSOReceivedDatebatch"].Value.ToString()))
-                    {
-                        smsoreceiveddate.CustomFormat = " ";
-                        smsoreceivedtime.CustomFormat = " ";
-                        smsoapprovedby.Text = string.Empty;
-                    }
-                    else
-                    {
-                        smsoreceiveddate.Text = row.Cells["txtSMSOReceivedDatebatch"].Value.ToString();
-                        smsoreceiveddate.CustomFormat = "dd-MMMM-yyyy";
-                        smsoreceivedtime.Text = row.Cells["txtSMSOReceivedTimebatch"].Value.ToString();
-                        smsoreceivedtime.CustomFormat = "HH:mm:ss";
-                        smsoapprovedby.Text = row.Cells["txtSMSOApprovedBybatch"].Value.ToString();
-                    }
-                    if (string.IsNullOrEmpty(row.Cells["txtApprovalRejectionCommentbatch"].Value.ToString()))
-                    {
-                        approvalrejectioncomment.Text = string.Empty;
-                    }
-                    else
-                    {
-                        approvalrejectioncomment.Text = row.Cells["txtApprovalRejectionCommentbatch"].Value.ToString();
-                    }
-                    if (string.IsNullOrEmpty(row.Cells["txtChaser1Datebatch"].Value.ToString()))
-                    {
-                        chaser1.CustomFormat = " ";
-                    }
-                    else
-                    {
-                        chasers_checkbox.Checked = true;
-                        chaser1_checkbox.Checked = true;
-                        chaser1_checkbox.Visible = true;
-                        chaser1.Text = row.Cells["txtChaser1Datebatch"].Value.ToString();
-                        chaser1.CustomFormat = "dd-MMMM-yyyy";
-                    }
-                    if (string.IsNullOrEmpty(row.Cells["txtChaser2Datebatch"].Value.ToString()))
-                    {
-                        chaser2.CustomFormat = " ";
-                    }
-                    else
-                    {
 
-                        chaser2_checkbox.Checked = true;
-                        chaser2_checkbox.Visible = true;
-                        chaser2.Text = row.Cells["txtChaser2Datebatch"].Value.ToString();
-                        chaser2.CustomFormat = "dd-MMMM-yyyy";
-                    }
-                    if (string.IsNullOrEmpty(row.Cells["txtChaser3Datebatch"].Value.ToString()))
-                    {
-                        chaser3.CustomFormat = " ";
-                    }
-                    else
-                    {
-                        chaser3_checkbox.Checked = true;
-                        chaser3_checkbox.Visible = true;
-                        chaser3.Text = row.Cells["txtChaser3Datebatch"].Value.ToString();
-                        chaser3.CustomFormat = "dd-MMMM-yyyy";
-                    }
-                    if (string.IsNullOrEmpty(row.Cells["txtRequestorEmailAddressbatch"].Value.ToString()))
-                    {
-                        requestoremailaddress.Text = string.Empty;
-                    }
-                    else
-                    {
-                        requestoremailaddress.Text = row.Cells["txtRequestorEmailAddressbatch"].Value.ToString();
-                    }
-                    if (string.IsNullOrEmpty(row.Cells["txtInquiryStatus"].Value.ToString()))
-                    {
-                        inquirystatus.SelectedIndex = -1;
-                    }
-                    else
-                    {
-                        inquirystatus.Text = row.Cells["txtInquiryStatus"].Value.ToString();
-                    }
-                    //associateloginid_allocation.Text = row.Cells["txtAssociateLoginID_Allocation"].Value.ToString();
-                    pagenumber.Value = Convert.ToInt32(row.Cells["txtPageNumber"].Value);
-                    associatename_allocation.Text = row.Cells["txtAssociateName_Allocation"].Value.ToString();
-                    associateloginid_allocation1.Text = row.Cells["txtAssociateLoginID_Allocation"].Value.ToString();
-                    allocationdate.Text = row.Cells["txtAllocationDate"].Value.ToString();
-                    allocationdate.CustomFormat = "dd-MMMM-yyyy";
-                    allocationtime.Text = row.Cells["txtAllocationTime"].Value.ToString();
-                    allocationtime.CustomFormat = "HH:mm:ss";
-                    allocatedby.Text = row.Cells["txtAllocatedBy"].Value.ToString();
-                    projectnonproject.Text = row.Cells["txtProjectNonProject"].Value.ToString();
-                    if (string.IsNullOrEmpty(row.Cells["txtProject_LastUpdatedBy"].Value.ToString()))
-                    {
-                        project_lastupdatedby.Text = string.Empty;
-                    }
-                    else
-                    {
-                        project_lastupdatedby.Text = row.Cells["txtProject_LastUpdatedBy"].Value.ToString();
-
-                    }
-                    if (string.IsNullOrEmpty(row.Cells["txtProject_LastUpdatedDate"].Value.ToString()))
-                    {
-                        project_lastupdateddate.CustomFormat = " ";
-                    }
-                    else
-                    {
-                        project_lastupdateddate.Text = row.Cells["txtProject_LastUpdatedDate"].Value.ToString();
-                        project_lastupdateddate.CustomFormat = "dd-MMMM-yyyy";
-                    }
-                    if (string.IsNullOrEmpty(row.Cells["txtProject_LastUpdatedTime"].Value.ToString()))
-                    {
-                        project_lastupdatedtime.CustomFormat = " ";
-                    }
-                    else
-                    {
-                        project_lastupdatedtime.Text = row.Cells["txtProject_LastUpdatedTime"].Value.ToString();
-                        project_lastupdatedtime.CustomFormat = "HH:mm:ss";
-
-                    }
-                    if (string.IsNullOrEmpty(row.Cells["txtentityidbatch"].Value.ToString()))
-                    {
-                        entityid.Text = string.Empty;
-                    }
-                    else
-                    {
-                        entityid.Text = row.Cells["txtentityidbatch"].Value.ToString();
-                    }
-                    uploaddate.Text = row.Cells["txtUploadDate"].Value.ToString();
-                    uploaddate.CustomFormat = "dd-MMMM-yyyy";
-                    uploadtime.Text = row.Cells["txtUploadTime"].Value.ToString();
-                    uploadtime.CustomFormat = "HH:mm:ss";
-                    uploadedby.Text = row.Cells["txtUploadedBy"].Value.ToString();
-                }
-                //checkBox2.Enabled = true;
-                if (update.Enabled == true && (inquirystatus_associatename.Text == "naika" || inquirystatus_associatename.Text == "kamathgg" || inquirystatus_associatename.Text == "BhosaleSh" || inquirystatus_associatename.Text == "parikhrm" || inquirystatus_associatename.Text == "ShethCh" || inquirystatus_associatename.Text == "BhallaMa" || inquirystatus_associatename.Text == "DsouzaDiX" || inquirystatus_associatename.Text == "SwamySh" || inquirystatus_associatename.Text == "RaoSR" || inquirystatus_associatename.Text == "BOMBLEHA" || inquirystatus_associatename.Text == "NairRaR" || inquirystatus_associatename.Text == "LokwaniEs"))
-                {
-                    checkBox2.Enabled = true;
-                }
-                else
-                {
-                    checkBox2.Enabled = false;
-                }
             }
             else
             {
+                string messsage = "Do you want to update the record?";
+                string title = "Message Box";
+                MessageBoxButtons buttons = MessageBoxButtons.YesNo;
+                DialogResult result = MessageBox.Show(messsage, title, buttons);
+                if (result == DialogResult.Yes)
+                {
+                    if (e.RowIndex >= 0)
+                    {
+                        DataGridViewRow row = this.batchworkflow_datagridview.Rows[e.RowIndex];
+                        requestid.Text = row.Cells["txtRequestIDbatch"].Value.ToString();
+                        batchid.Text = row.Cells["txtBatchIDbatch"].Value.ToString();
+                        inquiryid.Text = row.Cells["txtInquiryIDbatch"].Value.ToString();
+                        if (string.IsNullOrEmpty(row.Cells["txtRiskIDbatch"].Value.ToString()))
+                        {
+                            riskid.Text = string.Empty;
+                        }
+                        else
+                        {
+                            riskid.Text = row.Cells["txtRiskIDbatch"].Value.ToString();
+                        }
+                        trackingid.Text = row.Cells["txtTrackingIDbatch"].Value.ToString();
+                        receiveddate.Text = row.Cells["txtReceivedDatebatch"].Value.ToString();
+                        receiveddate.CustomFormat = "dd-MMMM-yyyy";
+                        receivedtime.Text = row.Cells["txtReceivedTimebatch"].Value.ToString();
+                        receivedtime.CustomFormat = "HH:mm:ss";
+                        entitytype.Text = row.Cells["txtEntityTypebatch"].Value.ToString();
+                        partyname.Text = row.Cells["txtPartyNamebatch"].Value.ToString();
+                        sourcebu.Text = row.Cells["txtSourceBUbatch"].Value.ToString();
+                        noofhits.Value = Convert.ToInt32(row.Cells["txtNoOfHitsbatch"].Value);
+                        if (string.IsNullOrEmpty(row.Cells["txtRiskCategorybatch"].Value.ToString()))
+                        {
+                            riskcategory.SelectedIndex = -1;
+                        }
+                        else
+                        {
+                            riskcategory.Text = row.Cells["txtRiskCategorybatch"].Value.ToString();
+                        }
+                        if (string.IsNullOrEmpty(row.Cells["txtEventCodesbatch"].Value.ToString()))
+                        {
+                            eventcodes.SelectedIndex = -1;
+                        }
+                        else
+                        {
+                            eventcodes.Text = row.Cells["txtEventCodesbatch"].Value.ToString();
+                        }
+                        if (string.IsNullOrEmpty(row.Cells["txtApprovedBy"].Value.ToString()))
+                        {
+                            approvedby.SelectedIndex = -1;
+                        }
+                        else
+                        {
+                            approvedby.Text = row.Cells["txtApprovedBy"].Value.ToString();
+                        }
+                        matchcriteria.Text = row.Cells["txtMatchCriteriabatch"].Value.ToString();
+                        if (string.IsNullOrEmpty(row.Cells["txtQueryRaisedDatebatch"].Value.ToString()))
+                        {
+                            queryraiseddate.CustomFormat = " ";
+                            queryraisedtime.CustomFormat = " ";
+                            queryremarks.SelectedIndex = -1;
+                        }
+                        else
+                        {
+                            queryraiseddate.Text = row.Cells["txtQueryRaisedDatebatch"].Value.ToString();
+                            queryraiseddate.CustomFormat = "dd-MMMM-yyyy";
+                            queryraisedtime.Text = row.Cells["txtQueryRaisedTimebatch"].Value.ToString();
+                            queryraisedtime.CustomFormat = "HH:mm:ss";
+                            queryremarks.Text = row.Cells["txtQueryRemarksbatch"].Value.ToString();
+                        }
+                        if (string.IsNullOrEmpty(row.Cells["txtQueryResolvedDatebatch"].Value.ToString()))
+                        {
+                            queryresolveddate.CustomFormat = " ";
+                            queryresolvedtime.CustomFormat = " ";
+                        }
+                        else
+                        {
+                            queryresolveddate.Text = row.Cells["txtQueryResolvedDatebatch"].Value.ToString();
+                            queryresolveddate.CustomFormat = "dd-MMMM-yyyy";
+                            queryresolvedtime.Text = row.Cells["txtQueryResolvedTimebatch"].Value.ToString();
+                            queryresolvedtime.CustomFormat = "HH:mm:ss";
+                        }
+                        if (string.IsNullOrEmpty(row.Cells["txtApprovalRaisedDatebatch"].Value.ToString()))
+                        {
+                            approvalraiseddate.CustomFormat = " ";
+                            approvalraisedtime.CustomFormat = " ";
+                            typeofapproval.SelectedIndex = -1;
+                        }
+                        else
+                        {
+                            approvalraiseddate.Text = row.Cells["txtApprovalRaisedDatebatch"].Value.ToString();
+                            approvalraiseddate.CustomFormat = "dd-MMMM-yyyy";
+                            approvalraisedtime.Text = row.Cells["txtApprovalRaisedTimebatch"].Value.ToString();
+                            approvalraisedtime.CustomFormat = "HH:mm:ss";
+                            typeofapproval.Text = row.Cells["txtTypeOfApprovalbatch"].Value.ToString();
+                        }
+                        if (string.IsNullOrEmpty(row.Cells["txtApprovalReceivedDatebatch"].Value.ToString()))
+                        {
+                            approvalreceiveddate.CustomFormat = " ";
+                            approvalreceivedtime.CustomFormat = " ";
+                        }
+                        else
+                        {
+                            approvalreceiveddate.Text = row.Cells["txtApprovalReceivedDatebatch"].Value.ToString();
+                            approvalreceiveddate.CustomFormat = "dd-MMMM-yyyy";
+                            approvalreceivedtime.Text = row.Cells["txtApprovalReceivedTimebatch"].Value.ToString();
+                            approvalreceivedtime.CustomFormat = "HH:mm:ss";
+                        }
+                        if (string.IsNullOrEmpty(row.Cells["txtCompletionDatebatch"].Value.ToString()))
+                        {
+                            completiondate.CustomFormat = " ";
+                            completiontime.CustomFormat = " ";
+                        }
+                        else
+                        {
+                            completiondate.Text = row.Cells["txtCompletionDatebatch"].Value.ToString();
+                            completiondate.CustomFormat = "dd-MMMM-yyyy";
+                            completiontime.Text = row.Cells["txtCompletionTimebatch"].Value.ToString();
+                            completiontime.CustomFormat = "HH:mm:ss";
+                        }
+                        if (string.IsNullOrEmpty(row.Cells["txtSMSORaisedDatebatch"].Value.ToString()))
+                        {
+                            smsoraiseddate.CustomFormat = " ";
+                            smsoraisedtime.CustomFormat = " ";
+                        }
+                        else
+                        {
+                            smsoraiseddate.Text = row.Cells["txtSMSORaisedDatebatch"].Value.ToString();
+                            smsoraiseddate.CustomFormat = "dd-MMMM-yyyy";
+                            smsoraisedtime.Text = row.Cells["txtSMSORaisedTimebatch"].Value.ToString();
+                            smsoraisedtime.CustomFormat = "HH:mm:ss";
+                        }
+                        if (string.IsNullOrEmpty(row.Cells["txtSMSOReceivedDatebatch"].Value.ToString()))
+                        {
+                            smsoreceiveddate.CustomFormat = " ";
+                            smsoreceivedtime.CustomFormat = " ";
+                            smsoapprovedby.Text = string.Empty;
+                        }
+                        else
+                        {
+                            smsoreceiveddate.Text = row.Cells["txtSMSOReceivedDatebatch"].Value.ToString();
+                            smsoreceiveddate.CustomFormat = "dd-MMMM-yyyy";
+                            smsoreceivedtime.Text = row.Cells["txtSMSOReceivedTimebatch"].Value.ToString();
+                            smsoreceivedtime.CustomFormat = "HH:mm:ss";
+                            smsoapprovedby.Text = row.Cells["txtSMSOApprovedBybatch"].Value.ToString();
+                        }
+                        if (string.IsNullOrEmpty(row.Cells["txtApprovalRejectionCommentbatch"].Value.ToString()))
+                        {
+                            approvalrejectioncomment.Text = string.Empty;
+                        }
+                        else
+                        {
+                            approvalrejectioncomment.Text = row.Cells["txtApprovalRejectionCommentbatch"].Value.ToString();
+                        }
+                        if (string.IsNullOrEmpty(row.Cells["txtChaser1Datebatch"].Value.ToString()))
+                        {
+                            chaser1.CustomFormat = " ";
+                        }
+                        else
+                        {
+                            chasers_checkbox.Checked = true;
+                            chaser1_checkbox.Checked = true;
+                            chaser1_checkbox.Visible = true;
+                            chaser1.Text = row.Cells["txtChaser1Datebatch"].Value.ToString();
+                            chaser1.CustomFormat = "dd-MMMM-yyyy";
+                        }
+                        if (string.IsNullOrEmpty(row.Cells["txtChaser2Datebatch"].Value.ToString()))
+                        {
+                            chaser2.CustomFormat = " ";
+                        }
+                        else
+                        {
+
+                            chaser2_checkbox.Checked = true;
+                            chaser2_checkbox.Visible = true;
+                            chaser2.Text = row.Cells["txtChaser2Datebatch"].Value.ToString();
+                            chaser2.CustomFormat = "dd-MMMM-yyyy";
+                        }
+                        if (string.IsNullOrEmpty(row.Cells["txtChaser3Datebatch"].Value.ToString()))
+                        {
+                            chaser3.CustomFormat = " ";
+                        }
+                        else
+                        {
+                            chaser3_checkbox.Checked = true;
+                            chaser3_checkbox.Visible = true;
+                            chaser3.Text = row.Cells["txtChaser3Datebatch"].Value.ToString();
+                            chaser3.CustomFormat = "dd-MMMM-yyyy";
+                        }
+                        if (string.IsNullOrEmpty(row.Cells["txtRequestorEmailAddressbatch"].Value.ToString()))
+                        {
+                            requestoremailaddress.Text = string.Empty;
+                        }
+                        else
+                        {
+                            requestoremailaddress.Text = row.Cells["txtRequestorEmailAddressbatch"].Value.ToString();
+                        }
+                        if (string.IsNullOrEmpty(row.Cells["txtInquiryStatus"].Value.ToString()))
+                        {
+                            inquirystatus.SelectedIndex = -1;
+                        }
+                        else
+                        {
+                            inquirystatus.Text = row.Cells["txtInquiryStatus"].Value.ToString();
+                        }
+                        //associateloginid_allocation.Text = row.Cells["txtAssociateLoginID_Allocation"].Value.ToString();
+                        pagenumber.Value = Convert.ToInt32(row.Cells["txtPageNumber"].Value);
+                        associatename_allocation.Text = row.Cells["txtAssociateName_Allocation"].Value.ToString();
+                        associateloginid_allocation1.Text = row.Cells["txtAssociateLoginID_Allocation"].Value.ToString();
+                        allocationdate.Text = row.Cells["txtAllocationDate"].Value.ToString();
+                        allocationdate.CustomFormat = "dd-MMMM-yyyy";
+                        allocationtime.Text = row.Cells["txtAllocationTime"].Value.ToString();
+                        allocationtime.CustomFormat = "HH:mm:ss";
+                        allocatedby.Text = row.Cells["txtAllocatedBy"].Value.ToString();
+                        projectnonproject.Text = row.Cells["txtProjectNonProject"].Value.ToString();
+                        if (string.IsNullOrEmpty(row.Cells["txtProject_LastUpdatedBy"].Value.ToString()))
+                        {
+                            project_lastupdatedby.Text = string.Empty;
+                        }
+                        else
+                        {
+                            project_lastupdatedby.Text = row.Cells["txtProject_LastUpdatedBy"].Value.ToString();
+
+                        }
+                        if (string.IsNullOrEmpty(row.Cells["txtProject_LastUpdatedDate"].Value.ToString()))
+                        {
+                            project_lastupdateddate.CustomFormat = " ";
+                        }
+                        else
+                        {
+                            project_lastupdateddate.Text = row.Cells["txtProject_LastUpdatedDate"].Value.ToString();
+                            project_lastupdateddate.CustomFormat = "dd-MMMM-yyyy";
+                        }
+                        if (string.IsNullOrEmpty(row.Cells["txtProject_LastUpdatedTime"].Value.ToString()))
+                        {
+                            project_lastupdatedtime.CustomFormat = " ";
+                        }
+                        else
+                        {
+                            project_lastupdatedtime.Text = row.Cells["txtProject_LastUpdatedTime"].Value.ToString();
+                            project_lastupdatedtime.CustomFormat = "HH:mm:ss";
+
+                        }
+                        if (string.IsNullOrEmpty(row.Cells["txtentityidbatch"].Value.ToString()))
+                        {
+                            entityid.Text = string.Empty;
+                        }
+                        else
+                        {
+                            entityid.Text = row.Cells["txtentityidbatch"].Value.ToString();
+                        }
+                        uploaddate.Text = row.Cells["txtUploadDate"].Value.ToString();
+                        uploaddate.CustomFormat = "dd-MMMM-yyyy";
+                        uploadtime.Text = row.Cells["txtUploadTime"].Value.ToString();
+                        uploadtime.CustomFormat = "HH:mm:ss";
+                        uploadedby.Text = row.Cells["txtUploadedBy"].Value.ToString();
+                    }
+                    //checkBox2.Enabled = true;
+                    if (update.Enabled == true && (inquirystatus_associatename.Text == "naika" || inquirystatus_associatename.Text == "kamathgg" || inquirystatus_associatename.Text == "BhosaleSh" || inquirystatus_associatename.Text == "parikhrm" || inquirystatus_associatename.Text == "ShethCh" || inquirystatus_associatename.Text == "BhallaMa" || inquirystatus_associatename.Text == "DsouzaDiX" || inquirystatus_associatename.Text == "SwamySh" || inquirystatus_associatename.Text == "RaoSR" || inquirystatus_associatename.Text == "BOMBLEHA" || inquirystatus_associatename.Text == "NairRaR" || inquirystatus_associatename.Text == "LokwaniEs"))
+                    {
+                        checkBox2.Enabled = true;
+                    }
+                    else
+                    {
+                        checkBox2.Enabled = false;
+                    }
+                }
+                else
+                {
                 batchid.Focus();
+                }
             }
+
         }
 
         private void queryraiseddate_MouseHover(object sender, EventArgs e)
