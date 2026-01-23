@@ -134,6 +134,7 @@ namespace Batch_Workflow
             entityid.Text = string.Empty;
             label27.Visible = false;
             requestoremailaddress.Visible = false;
+            businessconfirmedclientactive.Checked = false;
             entityid.Enabled = false;
             checkBox1.Checked = false;
             checkBox2.Checked = false;
@@ -370,6 +371,14 @@ namespace Batch_Workflow
                 cmd.Parameters.AddWithValue("@UploadDate", uploaddate.Value.Date);
                 cmd.Parameters.AddWithValue("@UploadTime", uploadtime.Value.ToLongTimeString());
                 cmd.Parameters.AddWithValue("@UploadedBy", uploadedby.Text);
+                if(businessconfirmedclientactive.Checked == true)
+                {
+                    cmd.Parameters.AddWithValue("BusinessConfirmedClientInactive","Yes");
+                }
+                else
+                {
+                    cmd.Parameters.AddWithValue("BusinessConfirmedClientInactive", DBNull.Value);
+                }
 
 
                 //if conditions
@@ -942,6 +951,14 @@ namespace Batch_Workflow
                 cmd.Parameters.AddWithValue("@LastUpdatedDateTime", DateTime.Now.ToLocalTime());
                 cmd.Parameters.AddWithValue("@MachineName", Environment.MachineName.ToString());
                 cmd.Parameters.AddWithValue("@InquiryStatus", inquirystatus.Text);
+                if (businessconfirmedclientactive.Checked == true)
+                {
+                    cmd.Parameters.AddWithValue("BusinessConfirmedClientInactive", "Yes");
+                }
+                else
+                {
+                    cmd.Parameters.AddWithValue("BusinessConfirmedClientInactive", DBNull.Value);
+                }
 
                 //if conditions
                 if (queryraiseddate.Text.Trim() != string.Empty && queryraiseddate.Value.Date < receiveddate.Value.Date)
@@ -2051,7 +2068,7 @@ namespace Batch_Workflow
                 if (string.IsNullOrEmpty(searchby_batchid_batchworkflow.Text) && string.IsNullOrEmpty(searchby_trackingid_batchworkflow.Text) && string.IsNullOrEmpty(searchby_riskid_batchworkflow.Text) && string.IsNullOrEmpty(searchby_partyname_batchworkflow.Text) && searchby_pagenumber_batchworkflow.Value <= 0 && string.IsNullOrEmpty(searchby_inquirystatus_batchworkflow.Text) && string.IsNullOrEmpty(searchby_associatename_batchworkflow.Text) && string.IsNullOrEmpty(searchby_sourcebu_batchworkflow.Text) && string.IsNullOrEmpty(searchby_entityid_batchworkflow.Text) && string.IsNullOrEmpty(searchby_eventlist_batchworkflow.Text))
                 {
                     cmd.CommandType = CommandType.Text;
-                    cmd.CommandText = "select top 100 RequestID,BatchID,InquiryID,RiskID,EntityID,TrackingID,ReceivedDate,ReceivedTime,EntityType,PartyName,SourceBU,NoOfHits,RiskCategory,EventCodes,MatchCriteria,QueryRaisedDate,QueryRaisedTime,QueryResolvedDate,QueryResolvedTime,QueryRemarks,ApprovalRaisedDate,ApprovalRaisedTime,ApprovalReceivedDate,ApprovalReceivedTime,TypeOfApproval,CompletionDate,CompletionTime,SMSORaisedDate,SMSORaisedTime,SMSOReceivedDate,SMSOReceivedTime,SMSOApprovedBy,ApprovalRejectionComment,Chaser1Date,Chaser2Date,Chaser3Date,RequestorEmailAddress,FinalStatus,PageNumber,InquiryStatus,AssociateName_Allocation,AssociateLoginID_Allocation,convert(date,AllocationDate) as AllocationDate,convert(time,AllocationDate) as AllocationTime,AllocatedBy,ProjectNonProject,Project_LastUpdatedBy,convert(date,Project_LastUpdatedDateTime) as Project_LastUpdatedDate,convert(time,Project_LastUpdatedDateTime) as Project_LastUpdatedTime,convert(date,UploadDateTime) as UploadDate,convert(time,UploadDateTime) as UploadTime,UploadedBy,EventList,LastUpdatedBy,ApprovedBy from dbo.tbl_batchworkflow_daily_dotnet with(nolock) where IsDeleted = 0 and AssociateLoginID_Allocation = @loginidparam order by FinalStatus desc,RequestID desc,BatchID,InquiryID";
+                    cmd.CommandText = "select top 100 RequestID,BatchID,InquiryID,RiskID,EntityID,TrackingID,ReceivedDate,ReceivedTime,EntityType,PartyName,SourceBU,NoOfHits,RiskCategory,EventCodes,MatchCriteria,QueryRaisedDate,QueryRaisedTime,QueryResolvedDate,QueryResolvedTime,QueryRemarks,ApprovalRaisedDate,ApprovalRaisedTime,ApprovalReceivedDate,ApprovalReceivedTime,TypeOfApproval,CompletionDate,CompletionTime,SMSORaisedDate,SMSORaisedTime,SMSOReceivedDate,SMSOReceivedTime,SMSOApprovedBy,ApprovalRejectionComment,Chaser1Date,Chaser2Date,Chaser3Date,RequestorEmailAddress,FinalStatus,PageNumber,InquiryStatus,AssociateName_Allocation,AssociateLoginID_Allocation,convert(date,AllocationDate) as AllocationDate,convert(time,AllocationDate) as AllocationTime,AllocatedBy,ProjectNonProject,Project_LastUpdatedBy,convert(date,Project_LastUpdatedDateTime) as Project_LastUpdatedDate,convert(time,Project_LastUpdatedDateTime) as Project_LastUpdatedTime,convert(date,UploadDateTime) as UploadDate,convert(time,UploadDateTime) as UploadTime,UploadedBy,EventList,LastUpdatedBy,ApprovedBy,BusinessConfirmedClientInactive from dbo.tbl_batchworkflow_daily_dotnet with(nolock) where IsDeleted = 0 and AssociateLoginID_Allocation = @loginidparam order by FinalStatus desc,RequestID desc,BatchID,InquiryID";
                     cmd.Parameters.AddWithValue("@loginidparam", Environment.UserName.ToString());
                 }
                 //else if (!string.IsNullOrEmpty(searchby_batchid_batchworkflow.Text) || !string.IsNullOrEmpty(searchby_inquiryid_batchworkflow.Text) || !string.IsNullOrEmpty(searchby_riskid_batchworkflow.Text) || !string.IsNullOrEmpty(searchby_partyname_batchworkflow.Text) || searchby_pagenumber_batchworkflow.Value > 0 || !string.IsNullOrEmpty(searchby_inquirystatus_batchworkflow.Text))
@@ -2461,6 +2478,14 @@ namespace Batch_Workflow
                         allocationtime.CustomFormat = "HH:mm:ss";
                         allocatedby.Text = row.Cells["txtAllocatedBy"].Value.ToString();
                         projectnonproject.Text = row.Cells["txtProjectNonProject"].Value.ToString();
+                        if (string.IsNullOrEmpty(row.Cells["txtBusinessConfirmedClientInactive"].Value.ToString()))
+                        {
+                            businessconfirmedclientactive.Checked = false;
+                        }
+                        else
+                        {
+                            businessconfirmedclientactive.Checked = true;
+                        }
                         if (string.IsNullOrEmpty(row.Cells["txtProject_LastUpdatedBy"].Value.ToString()))
                         {
                             project_lastupdatedby.Text = string.Empty;
@@ -2504,7 +2529,7 @@ namespace Batch_Workflow
                         uploadedby.Text = row.Cells["txtUploadedBy"].Value.ToString();
                     }
                     //checkBox2.Enabled = true;
-                    if (update.Enabled == true && (inquirystatus_associatename.Text == "naika" || inquirystatus_associatename.Text == "kamathgg" || inquirystatus_associatename.Text == "BhosaleSh" || inquirystatus_associatename.Text == "parikhrm" || inquirystatus_associatename.Text == "ShethCh" || inquirystatus_associatename.Text == "BhallaMa" || inquirystatus_associatename.Text == "DsouzaDiX" || inquirystatus_associatename.Text == "SwamySh" || inquirystatus_associatename.Text == "RaoSR" || inquirystatus_associatename.Text == "BOMBLEHA" || inquirystatus_associatename.Text == "NairRaR" || inquirystatus_associatename.Text == "LokwaniEs"))
+                    if (update.Enabled == true && (inquirystatus_associatename.Text == "naika" || inquirystatus_associatename.Text == "kamathgg" || inquirystatus_associatename.Text == "BhosaleSh" || inquirystatus_associatename.Text == "parikhrm" || inquirystatus_associatename.Text == "ShethCh" || inquirystatus_associatename.Text == "BhallaMa" || inquirystatus_associatename.Text == "DsouzaDiX" || inquirystatus_associatename.Text == "SwamySh" || inquirystatus_associatename.Text == "RaoSR" || inquirystatus_associatename.Text == "BOMBLEHA" || inquirystatus_associatename.Text == "NairRaR" || inquirystatus_associatename.Text == "LokwaniEs" || inquirystatus_associatename.Text == "DsouzaDiX"))
                     {
                         checkBox2.Enabled = true;
                     }
